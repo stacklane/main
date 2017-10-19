@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>StackLane</title>
+    <style>
+        body{
+            padding: 30%; padding-top: 20%; background: #3A414B;
+        }
+        svg{
+            display:block; margin:auto
+        }
+
+        .stacklane-logo  .logo-primary {
+            fill: #3b424c;
+        }
+        .stacklane-logo .logo-secondary{
+            fill: #13bdce;
+        }
+    </style>
+
+    {{% svg /_logos/ as logo }}
+</head>
+<body>
+{{>logo-stacklane}}
+</body>
+</html>
