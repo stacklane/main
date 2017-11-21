@@ -2,7 +2,4 @@ source: https://github.com/stacklane/docs.git
 
 namespace: docs
 
-# TODO delete this
-data: true
-
 at: /docs/
