@@ -3,8 +3,8 @@
     <title>Layers</title>
   </g>
   <g class="iconic-container" data-width="32" data-height="32">
-    <path stroke="#000" stroke-width="2" class="iconic-layers-layer-back iconic-property-accent iconic-property-stroke" fill="none" d="M31 4v27h-27" />
-    <path stroke="#000" stroke-width="2" class="iconic-layers-layer-middle iconic-property-accent iconic-property-stroke" fill="none" d="M28 2v26h-26" />
-    <path class="iconic-layers-layer-front iconic-property-fill" d="M0 0h26v26h-26z" />
+    <path stroke="#c5e7ee" stroke-width="2" class="iconic-layers-layer-back iconic-property-accent iconic-property-stroke" fill="none" d="M31 4v27h-27" />
+    <path stroke="#c5e7ee" stroke-width="2" class="iconic-layers-layer-middle iconic-property-accent iconic-property-stroke" fill="none" d="M28 2v26h-26" />
+    <path class="iconic-layers-layer-front iconic-property-fill" d="M0 0h26v26h-26z" fill="#339cb4" />
   </g>
 </svg>
