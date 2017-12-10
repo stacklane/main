@@ -5,7 +5,7 @@
 
 /**
  * Iconic duo tone
- */
+ * (only applicable for inline SVG)
 
 @mixin iconic-color($color) {
   fill: $color;
@@ -16,22 +16,19 @@ $color-primary: #339cb4;
 $color-secondary: lighten(#339cb4, 40%);
 
 
-/* Make sure filled and text elements only get fills */
 .iconic-property-fill, .iconic-property-text {
   stroke: none !important;
 }
 
-/* Make sure stroked elements only get strokes */
 .iconic-property-stroke {
   fill: none !important;
 }
 
-/* Main color */
 .iconic * {
   @include iconic-color($color-primary);
 }
 
-/* Accent color */
 .iconic .iconic-property-accent {
   @include iconic-color($color-secondary);
 }
+*/
