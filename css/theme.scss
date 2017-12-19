@@ -3,3 +3,32 @@
 @import "vendor";
 @import "main";
 
+/**
+ * Iconic duo tone
+ * (only applicable for inline SVG)
+
+@mixin iconic-color($color) {
+  fill: $color;
+  stroke: $color;
+}
+
+$color-primary: #339cb4;
+$color-secondary: lighten(#339cb4, 40%);
+
+
+.iconic-property-fill, .iconic-property-text {
+  stroke: none !important;
+}
+
+.iconic-property-stroke {
+  fill: none !important;
+}
+
+.iconic * {
+  @include iconic-color($color-primary);
+}
+
+.iconic .iconic-property-accent {
+  @include iconic-color($color-secondary);
+}
+*/
