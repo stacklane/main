@@ -1,4 +1,3 @@
-source: https://github.com/stacklane/docs.git
+source: https://github.com/stacklane/web-docs.git
 
 namespace: docs
-
