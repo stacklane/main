@@ -1287,6 +1287,7 @@ h1.intro-header::before {
 #header-nav-wrap .header-main-nav li a {
   display: block;
   line-height: 72px;
+  font-weight: 600; /* bold is 700 */
 }
 
 #header-nav-wrap .header-main-nav li a,
@@ -1312,6 +1313,7 @@ h1.intro-header::before {
   text-transform: none;
   letter-spacing: normal;
   margin: 0;
+  font-weight: bold;
 }
 
 
@@ -1844,7 +1846,8 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 #about {
   min-height: 786px;
   background: #ffffff;
-  padding-top: 18rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
   overflow: hidden;
 }
 
@@ -2089,8 +2092,8 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 #pricing {
   background: #ebebeb;
-  padding-top: 15rem;
-  padding-bottom: 12rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
 }
 
 #pricing h1 {
@@ -2775,6 +2778,7 @@ footer ul a:visited {
   border-radius: 5px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-weight: bold;
 }
 
 #go-top a i,
