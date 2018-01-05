@@ -1,3 +1,4 @@
+<!--TEMPLATE mustache-->
 <!DOCTYPE html>
 <!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
@@ -18,7 +19,8 @@
 	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 	
 	<link rel="prefetch" href="/docs/" />
-    <link rel="prefetch" href="/play/" />
+
+    {{% svg /images/logo_font_w as inline-logo }}
 </head>
 
 <body id="top">
@@ -29,20 +31,8 @@
 
    		<div class="header-logo">
 	        <a href="/">
-				<span aria-hidden="true">Stacklane</span>	
-			<svg class="stacklane-logo" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 214 33" version="1.1"
-			     >
-				<!-- Stack -->
-			    <path class="logo-primary" d="M47.821,12.083c-0.431,0.354 -0.646,0.822 -0.646,1.406c0,0.583 0.263,1.047 0.79,1.391c0.525,0.345 1.74,0.751 3.643,1.22c1.903,0.468 3.381,1.171 4.433,2.108c1.052,0.938 1.578,2.306 1.578,4.104c0,1.797 -0.674,3.256 -2.023,4.375c-1.348,1.119 -3.123,1.678 -5.322,1.678c-3.175,0 -6.035,-1.176 -8.579,-3.529l2.668,-3.271c2.162,1.894 4.161,2.841 5.997,2.841c0.822,0 1.468,-0.177 1.937,-0.531c0.468,-0.354 0.703,-0.832 0.703,-1.435c0,-0.602 -0.249,-1.08 -0.746,-1.434c-0.498,-0.354 -1.483,-0.713 -2.955,-1.076c-2.334,-0.555 -4.041,-1.277 -5.122,-2.166c-1.081,-0.889 -1.621,-2.286 -1.621,-4.189c0,-1.903 0.683,-3.371 2.052,-4.405c1.367,-1.032 3.074,-1.549 5.121,-1.549c1.339,0 2.677,0.23 4.017,0.689c1.338,0.459 2.505,1.109 3.5,1.951l-2.267,3.271c-1.741,-1.32 -3.538,-1.98 -5.393,-1.98c-0.746,0 -1.335,0.177 -1.765,0.531" />
-				<path class="logo-primary" d="M69.755,11.953l0,16.182l-4.476,0l0,-16.182l-5.681,0l0,-3.874l15.838,0l0,3.874l-5.681,0Z" />
-				<path class="logo-primary" d="M85.478,14.048l-2.525,5.824l5.021,0l-2.496,-5.824ZM91.532,28.135l-1.865,-4.332l-8.407,0l-1.865,4.332l-4.763,0l8.665,-20.055l4.333,0l8.664,20.055l-4.762,0Z" />
-				<path class="logo-primary" d="M107.828,24.176c2.2,0 3.998,-0.87 5.394,-2.611l2.869,2.955c-2.277,2.564 -4.959,3.844 -8.048,3.844c-3.089,0 -5.633,-0.975 -7.631,-2.925c-2,-1.951 -2.999,-4.414 -2.999,-7.388c0,-2.975 1.019,-5.457 3.057,-7.446c2.036,-1.989 4.527,-2.984 7.472,-2.984c3.29,0 6.044,1.253 8.264,3.759l-2.782,3.156c-1.417,-1.76 -3.177,-2.64 -5.281,-2.64c-1.683,0 -3.123,0.55 -4.317,1.65c-1.195,1.1 -1.793,2.582 -1.793,4.447c0,1.865 0.563,3.362 1.692,4.49c1.128,1.129 2.496,1.693 4.104,1.693" />
-			    <path class="logo-primary" d="M119.621,8.08l4.476,0l0,8.235l7.574,-8.235l5.538,0l-7.978,8.866c0.69,0.957 1.962,2.74 3.817,5.351c1.854,2.611 3.243,4.557 4.161,5.839l-5.223,0l-5.882,-7.919l-2.007,2.238l0,5.681l-4.476,0l0,-20.056Z" />
-				<path class="logo-secondary" d="M151.666,25.955l0,2.18l-11.102,0l0,-20.08l2.295,0l0,17.9l8.807,0Z" />
-				<path class="logo-secondary" d="M162.827,10.665l-4.476,10.184l9.008,0l-4.532,-10.184ZM157.377,23.058l-2.238,5.077l-2.439,0l9.008,-20.08l2.381,0l8.979,20.08l-2.496,0l-2.237,-5.077l-10.958,0Z" />
-				<path class="logo-secondary" d="M190.571,28.136l-12.048,-16.122l0,16.122l-2.295,0l0,-20.081l2.381,0l12.048,16.151l0,-16.151l2.267,0l0,20.081l-2.353,0Z" />
-				<path class="logo-secondary" d="M201.332,10.264l0,6.598l10.126,0l0,2.209l-10.126,0l0,6.884l11.704,0l0,2.181l-13.999,0l0,-20.081l13.626,0l0,2.209l-11.331,0Z" />
-			</svg>
+				<span aria-hidden="true">Stacklane</span>
+                {{>inline-logo}}
 			</a>
 	    </div>
 
@@ -323,7 +313,7 @@
                         <div class="plan-block primary" data-aos="fade-up">
 
                             <div class="plan-top-part">
-                                <h3 class="plan-block-title">One Domain</h3>
+                                <h3 class="plan-block-title">One Root Domain</h3>
                                 <p class="plan-block-price"><sup>$</sup>50</p>
                                 <p class="plan-block-per">Per Month</p>
                             </div>
@@ -356,25 +346,122 @@
     <!-- footer
     ================================================== -->
     <footer>
+        <div class="footer-main">
+            <div class="row">
+
+                <div class="col-three md-1-3 tab-full footer-info">
+
+                    <div class="footer-logo"></div>
+
+                    <p>
+                        Stacklane is the automatically scalable platform
+                        for microservices,
+                        smart data models,
+                        and the RESTful web.
+                    </p>
+                    <!--
+                                        <ul class="footer-social-list">
+                                            <li>
+                                                <a href="#"><i class="fa fa-facebook-square"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-behance"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                            </li>
+                                        </ul>-->
 
 
-      <div class="footer-bottom">
+                </div> <!-- end footer-info -->
 
-      	<div class="row">
+                <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
 
-      		<div class="col-twelve">
-	      		<div class="copyright">
-		         	<span>&copy; Copyright Stacklane, Inc. 2017-2018</span>
-		         </div>
+                    <h4>Contact</h4>
 
-		         <div id="go-top">
-		            <a class="smoothscroll" title="Back to Top" href="#top"><!--i class="icon-arrow-up"></i-->↑</a>
-		         </div>         
-	      	</div>
+                    <p>
+                        4845 Pearl East Cir Ste 101<br>
+                        Boulder, Colorado<br>
+                        80301 US<br>
+                    </p>
 
-      	</div> <!-- end footer-bottom -->     	
+                    <p>
+                       <!--
+                       Email/Form/Phone
+                       -->
+                    </p>
 
-      </div>
+                </div> <!-- end footer-contact -->
+
+                <div class="col-two md-1-3 tab-1-2 mob-full footer-site-links">
+
+                    <h4>Site Links</h4>
+
+                    <ul class="list-links">
+                        <li><a href="/#top" class="smoothscroll">Home</a></li>
+                        <li><a href="/docs/">Documentation</a></li>
+                        <li><a href="/#pricing" class="smoothscroll">Pricing</a></li>
+                        <!--
+                                                <li><a href="/about">About Us</a></li>
+                                                <li><a href="#">Blog</a></li>
+                                                <li><a href="#">FAQ</a></li>
+                                                <li><a href="#">Terms</a></li>
+                                                <li><a href="/privacy">Privacy Policy</a></li>
+                        -->
+                    </ul>
+
+                </div> <!-- end footer-site-links -->
+
+                <div class="col-four md-1-2 tab-full footer-subscribe">
+                    <!--
+
+                                     <h4>Our Newsletter</h4>
+
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                     <div class="subscribe-form">
+
+                                         <form id="mc-form" class="group" novalidate="true">
+
+                                             <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+
+                                             <input type="submit" name="subscribe" value="Send">
+
+                                             <label for="mc-email" class="subscribe-message"></label>
+
+                                         </form>
+
+                                     </div>
+
+                                 </div> --> <!-- end footer-subscribe -->
+
+                </div>
+            </div>  <!-- /row -->
+        </div> <!-- end footer-main -->
+
+        <div class="footer-bottom">
+
+        <div class="row">
+
+        <div class="col-twelve">
+            <div class="copyright">
+                <span>&copy; Copyright Stacklane, Inc. 2017-2018</span>
+             </div>
+
+             <div id="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><!--i class="icon-arrow-up"></i-->↑</a>
+             </div>
+        </div>
+
+        </div>
+
+        </div> <!-- end footer-bottom -->
 
     </footer>
 	
