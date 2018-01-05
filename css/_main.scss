@@ -1138,7 +1138,7 @@ h1.intro-header::before {
 
 .header-logo {
   position: absolute;
-  left: 20px;
+  left: 40px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1154,7 +1154,7 @@ h1.intro-header::before {
   padding: 0;
   outline: 0;
   border: none;
-  width: 120px;
+  width: 100px;
   /*height: 22px;*/
   font: 0/0 a;
   text-shadow: none;
@@ -1162,10 +1162,7 @@ h1.intro-header::before {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.stacklane-logo .logo-primary, .stacklane-logo .logo-secondary{
-  fill: white;
-  /*stroke: white;*/
-}
+
 
 
 
@@ -1332,7 +1329,7 @@ h1.intro-header::before {
 
 @media only screen and (max-width: 768px) {
   .header-logo{
-    left: 10px;
+   // left: 20px;
   }
   .header-logo a {
 
@@ -2631,10 +2628,10 @@ footer ul a:visited {
   padding: 0;
   outline: 0;
   border: none;
-  width: 93px;
-  height: 21px;
-  /*background: url("../images/logo.png") no-repeat center;
-  background-size: 93px 21px;*/
+  width: 120px;
+  height: 19px;
+  background: url("/images/logo_font_w.svg") no-repeat center;
+  background-size: 120px 19px;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
