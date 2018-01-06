@@ -1,42 +1,31 @@
 
-@import "base";
-@import "vendor";
+@import "normalize";
+@import "aos";
 @import "main";
 
-/*
-.stacklane-logo .logo-primary,
-.stacklane-logo .logo-secondary{
-  fill: white;
-
-}
-*/
 
 /**
- * Iconic duo tone
- * (only applicable for inline SVG)
+ * AOS is good for scrolling, but we want animations before AOS might be avail.
+ */
 
-@mixin iconic-color($color) {
-  fill: $color;
-  stroke: $color;
+.fade-up-onload{
+  animation: fade-up-onload-kf .4s;
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
-$color-primary: #339cb4;
-$color-secondary: lighten(#339cb4, 40%);
-
-
-.iconic-property-fill, .iconic-property-text {
-  stroke: none !important;
+.fade-up-onload.slower{
+  animation: fade-up-onload-kf .8s;
 }
 
-.iconic-property-stroke {
-  fill: none !important;
+/**
+ * Similar settings to AOS
+ */
+@keyframes fade-up-onload-kf {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translate(0);
+  }
 }
 
-.iconic * {
-  @include iconic-color($color-primary);
-}
-
-.iconic .iconic-property-accent {
-  @include iconic-color($color-secondary);
-}
-*/

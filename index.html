@@ -1,19 +1,24 @@
 <!--TEMPLATE mustache-->
 <!DOCTYPE html>
-<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if lt IE 9 ]><html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="oldie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
+<html lang="en">
+<!--<html class="no-js" lang="en">-->
 <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
     <title>Stacklane</title>
 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
     <link rel="stylesheet" href="css/theme.scss">
 
+    <!--
+    TODO reevaluate this
+
     <script src="js/modernizr.js"></script>
+    -->
 	
 	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
@@ -27,7 +32,7 @@
 
     <!-- header 
    ================================================== -->
-   <header id="header" class="row">   
+   <header id="header" class="row">
 
    		<div class="header-logo">
 	        <a href="/">
@@ -36,19 +41,18 @@
 			</a>
 	    </div>
 
-	   	<nav id="header-nav-wrap">
-			<ul class="header-main-nav">
-				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                <li><a class="smoothscroll"  href="#about" title="platform">Platform</a></li>
-                <li><a class="smoothscroll"  href="#pricing" title="pricing">Pricing</a></li>
+	   	<nav id="header-nav-wrap"> <!-- nav-wrap nav-collapse nav-menu -->
+			<ul class="header-main-nav" data-gumshoe> <!-- nav -->
+				<li><a class="smoothscroll" href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll" href="#about" title="platform">Platform</a></li>
+                <li><a class="smoothscroll" href="#pricing" title="pricing">Pricing</a></li>
 				<li><a href="/docs/" title="docs">Docs</a></li>
 			</ul>
-			
+
            <!-- <a href="#" title="sign-up" class="button button-primary cta">Sign In</a> -->
 		</nav>
 
-	
-		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
+		<a class="header-menu-toggle" data-nav-toggle="#header-nav-wrap" href="#"><span>Menu</span></a>
    	
    </header> <!-- /header -->
 
@@ -455,7 +459,7 @@
              </div>
 
              <div id="go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top"><!--i class="icon-arrow-up"></i-->↑</a>
+                <a class="smoothscroll" title="Back to Top" href="#home">↑</a>
              </div>
         </div>
 
@@ -464,8 +468,12 @@
         </div> <!-- end footer-bottom -->
 
     </footer>
-	
-	<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/aos@2.2.0,npm/waypoints@4.0.1/lib/jquery.waypoints.min.js,npm/owl.carousel@2.2.0"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.201711092/classList.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.2.0/dist/aos.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gumshoejs@3.5.0/dist/js/gumshoe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5/dist/js/smooth-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/astronav@10.2.0/dist/js/astro.min.js"></script>
 
     <script src="js/main.js"></script>
 
