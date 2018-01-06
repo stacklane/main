@@ -1,42 +1,74 @@
 
-@import "base";
-@import "vendor";
+@import "normalize";
 @import "main";
 
-/*
-.stacklane-logo .logo-primary,
-.stacklane-logo .logo-secondary{
-  fill: white;
-
-}
-*/
 
 /**
- * Iconic duo tone
- * (only applicable for inline SVG)
+ * AOS is good for scrolling, but we want animations before AOS might be avail.
+ */
 
-@mixin iconic-color($color) {
-  fill: $color;
-  stroke: $color;
+.fade-up-onload{
+  animation: fade-up-onload-kf .4s;
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
-$color-primary: #339cb4;
-$color-secondary: lighten(#339cb4, 40%);
-
-
-.iconic-property-fill, .iconic-property-text {
-  stroke: none !important;
+.fade-up-onload.slower{
+  animation: fade-up-onload-kf .8s;
 }
 
-.iconic-property-stroke {
-  fill: none !important;
+/**
+ * Similar settings to AOS
+ */
+@keyframes fade-up-onload-kf {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translate(0);
+  }
 }
 
-.iconic * {
-  @include iconic-color($color-primary);
+/**
+ * AOS -- Only activate if we know JS is active,
+ *  otherwise content will be hidden
+ */
+
+.js {
+  [data-aos^=fade][data-aos^=fade] {
+    opacity: 0;
+    transition-property: opacity, transform;
+  }
+
+  [data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  [data-aos=fade-up] {
+    transform: translateY(100px);
+  }
 }
 
-.iconic .iconic-property-accent {
-  @include iconic-color($color-secondary);
+[data-aos][data-aos][data-aos-easing=ease-in-sine],
+body[data-aos-easing=ease-in-sine] [data-aos] {
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
 }
-*/
+
+[data-aos][data-aos][data-aos-duration='400'],
+body[data-aos-duration='400'] [data-aos] {
+  transition-duration: .4s;
+}
+
+[data-aos][data-aos][data-aos-delay='400'],
+body[data-aos-delay='400'] [data-aos] {
+  transition-delay: 0;
+}
+
+[data-aos][data-aos][data-aos-delay='400'].aos-animate,
+body[data-aos-delay='400'] [data-aos].aos-animate {
+  transition-delay: .4s;
+}
+
+
+
+
