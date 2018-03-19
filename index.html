@@ -10,11 +10,12 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	
+    <link itemprop="content-security-policy" data-connect-self="true">
+
     <link rel="stylesheet" href="css/theme.scss">
 
     <!--
-    TODO reevaluate this, what are we really losing by not loading it.
+    TODO reevaluate this, what are we losing by not loading it.
 
     <script src="js/modernizr.js"></script>
     -->
@@ -47,6 +48,12 @@
                 <li><a class="smoothscroll" href="#about" title="platform">Platform</a></li>
                 <li><a class="smoothscroll" href="#pricing" title="pricing">Pricing</a></li>
 				<li><a href="/docs/" title="docs">Docs</a></li>
+                <li>
+                    <a href="/status/" id="status" class="up">
+                        <span id="status-indicator"></span>
+                        <span id="status-text"></span>
+                    </a>
+                </li>
 			</ul>
 
            <!-- <a href="#" title="sign-up" class="button button-primary cta">Sign In</a> -->

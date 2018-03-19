@@ -86,7 +86,7 @@ ready(function(){
     /**
      * Back to top button
      */
-     var ssBackToTop = function() {
+    var ssBackToTop = function() {
 
 		var pxShow  = 500, // height on which the button will show
 		goTopButton = document.querySelector("#go-top")
@@ -103,6 +103,33 @@ ready(function(){
 
 	};
 
+    var updateStatus = function(){
+         var xhr = new XMLHttpRequest();
+         xhr.open('GET', '/status/api/status');
+
+         xhr.onreadystatechange = function () {
+             var DONE = 4; // readyState 4 means the request is done.
+             var OK = 200; // status 200 is a successful return.
+             if (xhr.readyState === DONE) {
+                 if (xhr.status === OK) {
+
+                     var r = JSON.parse(xhr.responseText);
+
+                     document.getElementById('status').setAttribute('class', r.status);
+                     document.getElementById('status').setAttribute('title', new Date().toLocaleString());
+
+                 } else {
+                     document.getElementById('status').setAttribute('class', 'error');
+                 }
+             } else {
+                 document.getElementById('status').setAttribute('class', 'error');
+                 console.log('Error: ' + xhr.status); // An error occurred during the request.
+             }
+         };
+
+         xhr.send(null);
+    };
+
     /**
      * Init
      */
@@ -113,6 +140,8 @@ ready(function(){
 		ssSmoothScroll();
 		ssAOS();
 		ssBackToTop();
+
+		updateStatus();
 
 	})();
 

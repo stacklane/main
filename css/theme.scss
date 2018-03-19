@@ -2,6 +2,69 @@
 @import "normalize";
 @import "main";
 
+/**
+ * Status
+ */
+
+@keyframes status-pulse {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  45%, 85% {
+    opacity: .25;
+  }
+}
+
+$status-text: (
+  up: 'Fully Operational',
+  down: 'System Down',
+  partial: 'Partially Unavailable',
+  maintenance: 'Scheduled Maintenance',
+  error: 'Error Checking Status'
+);
+
+$status-color: (
+  up: #b8e986,
+  down: red,
+  partial: #efe17a,
+  maintenance: #efe17a,
+  error: #efe17a
+);
+
+#status {
+  font-size: 1.1rem;
+  line-height: inherit;
+}
+
+#status-indicator:after{
+  content: '';
+  height: 6px;
+  width: 6px;
+  margin-right: .5rem;
+  margin-bottom: 1px;
+  border-radius: 4px;
+  display:inline-block;
+  animation: status-pulse 3s infinite linear;
+}
+
+@mixin status($status) {
+  #status.#{$status}{
+    #status-text:after {
+      content: map-get($status-text, $status);
+      color: map-get($status-color, $status);
+    }
+    #status-indicator:after{
+      box-shadow: 0 0 7px 1px map-get($status-color, $status);
+      background-color: map-get($status-color, $status);
+    }
+  }
+}
+
+@each $status-type, $status-string in $status-text {
+  @include status($status-type);
+}
+
 
 /**
  * AOS is good for scrolling, but we want animations before AOS might be avail.
