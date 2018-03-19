@@ -1236,6 +1236,7 @@ h1.intro-header::before {
   }
   #header-nav-wrap {
     opacity:0;
+    visibility:hidden;
     height: auto;
     width: 100%;
     right: auto;
@@ -1245,6 +1246,7 @@ h1.intro-header::before {
   }
   #header-nav-wrap.active{
     display: block;
+    visibility: visible;
     opacity: 1;
     transition: opacity 0.4s; /* transition therefore only exists when it showing/displaying */
   }
