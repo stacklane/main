@@ -1,0 +1,136 @@
+
+
+.has-hero-background{
+  position: relative;
+  z-index: 1;
+
+  .hero-background{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-repeat: no-repeat;
+
+    &.has-image-supported{
+      background-image:url(/images/support.svg);
+      background-position: bottom right;
+      background-size: 50%;
+    }
+    &.has-image-rocket{
+      background-image: url(/images/rocket.svg);
+      background-position: 90% 100%;
+      background-size: 30%;
+    }
+    &.has-midline{
+      @include tablet(){
+        border-right: 2px solid $grey-lighter;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.hero{
+  .hero-head{
+    .navbar:last-child{
+      padding-bottom: 0rem;
+    }
+  }
+
+  &.is-large {
+    @include tablet {
+      .hero-head + .hero-body {
+        padding-bottom: 18rem;
+        padding-top: 14rem;
+      }
+    }
+  }
+}
+.hero.has-shadow{
+  box-shadow: 0px 0px 5px rgba($black, 0.5);
+}
+
+.hero.is-white{
+  background: $white;
+
+  .title{
+    color: $black;
+  }
+  .subtitle{
+    color: $grey-dark;
+  }
+
+  a{
+    color: $primary !important;
+  }
+  a:hover{
+    color: $grey-dark !important;
+  }
+}
+
+.hero.is-grey-lighter{
+  background: $grey-lighter;
+}
+
+.hero.is-dark{
+  hr{
+    background: $white-ter;
+  }
+  .navbar-brand{
+    svg{
+      fill: $white;
+    }
+    &:hover{
+      svg{
+        fill: $primary;
+      }
+    }
+  }
+
+  @include nav-item-color($grey-lighter, $grey-lightest, $grey-darker);
+
+  .navbar .container.has-border{
+    border-bottom: 2px solid $grey-darker;
+  }
+}
+
+.hero.is-light{
+  .title{
+    color: $black;
+  }
+  .subtitle{
+    color: $grey-dark;
+  }
+  hr{
+    background: $grey-lighter;
+  }
+  .navbar-brand{
+    svg{
+      fill: $grey-dark;
+    }
+    &:hover{
+      svg{
+        fill: $primary;
+      }
+    }
+  }
+
+  @include nav-item-color($grey, $grey-dark, $grey-darker);
+
+  .navbar .container.has-border{
+    border-bottom: 2px solid $grey-lighter;
+  }
+}
+
+.hero.is-info{
+  &.is-bold {
+    background-image: linear-gradient(141deg, $blue 0%, $blue-light 71%, $blue-lighter 100%);
+  }
+
+  .navbar-brand svg{
+    fill: $grey-lightest;
+  }
+
+  @include nav-item-color($grey-lighter, $grey-lightest, $grey-darker);
+}

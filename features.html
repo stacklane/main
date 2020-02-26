@@ -1,0 +1,33 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% svg /_logos/ as logo }}
+
+{{< nav-wrapper}}
+
+{{$title}}Full-Service Web App Platform{{/title}}
+
+{{$content}}
+
+<section class="hero is-light has-shadow">
+    <div class="hero-head">
+        {{>nav-platform}}
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            {{>nav-features}}
+        </div>
+    </div>
+</section>
+
+<section class="hero is-medium is-white has-shadow">
+    <div class="hero-body">
+
+
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}

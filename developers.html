@@ -1,0 +1,138 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% svg /_logos/ as logo }}
+
+{{< nav-wrapper}}
+
+{{$title}}Developer-Centric Web App Platform{{/title}}
+
+{{$content}}
+
+<section class="hero is-medium is-dark is-bold has-shadow">
+    <div class="hero-head">
+        {{>nav-developers}}
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-three-fifths">
+                    <div class="title is-size-2 has-text-weight-normal" data-aos="fade-right">
+                        Work on what matters.
+                    </div>
+                    <div class="subtitle is-size-6" data-aos="fade-left">
+                        Jump start your next web project. Built with the developer in mind, Stacklane allows
+                        you to deploy quickly on a stable foundation to give you and your client peace of mind.
+                    </div>
+                    <div class="buttons">
+                        <a href="{{🎨.signup-url}}" class="button is-primary">{{🎨.start-now}}</a>
+                        <a href="/docs/" class="button is-white">Read Docs →</a>
+                    </div>
+                </div>
+                <div class="column is-hidden-mobile is-image-code-umbrella">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-white is-medium">
+    <div class="hero-body">
+        <div class="container">
+            {{!<div class="title has-text-dark is-size-3 has-text-weight-light has-text-centered">
+                Create faster using the tools you already know and lov
+            </div>}}
+
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="icon is-medium">{{>svg-layers}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Turnkey software architecture
+                    </div>
+                    <p class="is-size-7 is-block">
+                        Rapidly deliver and maintain complex applications with our obsessively engineered architecture.  Stacklane was born through the trials and tribulations of successful web startups.  The urgency of delivery should not sacrifice security, speed, and long-term maintenance.  Think about delivering today – we’ve got tomorrow’s successes covered.
+                    </p>
+                </div>
+                <div class="column is-half">
+                    <div class="icon is-medium">{{>svg-team}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Smaller teams, bigger results
+                    </div>
+                    <p class="is-size-7 is-block">
+                        Say goodbye to frameworks, libraries, patching, database tuning, and arcane deployment.  Accelerate software delivery cycles and get your product to market faster with a platform that allows your team to create products without worrying about infrastructure.
+                    </p>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="icon is-medium">{{>svg-browser-coding}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Write once, run forever
+                    </div>
+                    <p class="is-size-7 is-block">
+                        Writing code for the Stacklane platform means never worrying about API versioning, deprecation, or upgrades again.
+                        You took the time to write your code, and shouldn’t have to change it simply because we want you to.
+                        We believe in a platform that lets your code run... forever. <a href="/forever">Learn more →</a>
+                    </p>
+                </div>
+                <div class="column is-half">
+                    <div class="icon is-medium">{{>svg-thought}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Create better products with the tools you already use
+                    </div>
+                    <p class="is-size-7 is-block">
+                        Reduce creation time while using the tools and web technologies you already use and love. Stacklane integrates with the software you already utilize, such as JavaScript, NoSQL, GitHub, and BitBucket.
+                    </p>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="icon is-medium">{{>svg-radar}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Effortless performance
+                    </div>
+                    <p class="is-size-7 is-block">
+                        Stacklane makes data a fundamental building block of the web.  Use data in a big or small ways, and everywhere in between.  Go serverless, and focus on outcomes not individual instances.
+                    </p>
+                </div>
+                <div class="column is-half">
+                    <div class="icon is-medium">{{>svg-shield}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Protect your data and users
+                    </div>
+                    <p class="is-size-7 is-block">
+                        Spend your time creating rather than worrying about the security of your products and customers.  Don’t wait until success hits to think about security – secure web-apps from the beginning with our uncompromising best practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-dark has-shadow is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="title is-size-4 has-text-weight-light has-text-primary">
+                        Ready to get started?
+                    </div>
+                    <div class="subtitle is-size-4 has-text-weight-normal has-text-white">
+                        Check out our developer docs.
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="buttons is-pulled-right">
+                        <a href="/docs/" class="button is-white">Read Docs →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}

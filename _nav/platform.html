@@ -1,0 +1,31 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% import {PlatformNav} from '📤'}}
+
+<nav class="navbar is-spaced is-transparent">
+    <div class="container has-border">
+        {{>nav-bar}}
+    </div>
+</nav>
+<nav class="navbar is-spaced is-transparent is-uppercase has-text-primary has-text-weight-semibold is-size-7">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/platform" class="navbar-item">
+                Platform
+            </a>
+        </div>
+        <div class="navbar-end">
+            <a class="navbar-item {{#PlatformNav.overview}}is-active{{/PlatformNav.overview}}" href="/platform">
+                Overview
+            </a>
+            <a class="navbar-item {{#PlatformNav.features}}is-active{{/PlatformNav.features}}" href="/features">
+                Features
+            </a>
+            <a class="navbar-item" href="/guide/">
+                Guide →
+            </a>
+        </div>
+    </div>
+</nav>

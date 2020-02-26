@@ -1,0 +1,256 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% svg /_logos/ as logo }}
+
+{{< nav-wrapper}}
+
+{{$title}}Pricing{{/title}}
+
+{{$content}}
+
+<section class="hero is-info is-bold has-hero-background has-shadow">
+    <div class="hero-head">
+        <nav class="navbar is-spaced is-transparent">
+            <div class="container">
+                {{>nav-bar}}
+            </div>
+        </nav>
+    </div>
+    <div class="hero-body">
+        <div class="container">
+
+            <div class="title is-size-2 has-text-weight-light has-text-centered" data-aos="flip-left">
+                Pricing built for businesses of all stages.
+            </div>
+            <div class="subtitle has-text-dark is-size-3 has-text-weight-light has-text-centered" data-aos="flip-right">
+                Always free development and test environments.
+                <br>
+                &nbsp;
+            </div>
+
+            <div class="columns">
+                <div class="column">
+                    <div class="card is-white">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered is-uppercase has-text-weight-semibold has-text-primary">
+                                Starter
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="has-text-centered">
+                                <div class="is-size-7 has-text-grey">Starting at</div>
+                                <div class="is-size-3 has-text-dark">$19 / <span class="is-size-6">month</span></div>
+                                <div class="is-size-7 has-text-grey">
+                                    <div>&nbsp;</div>
+                                    <div>Only pay for live deployments.</div>
+                                    <div>2+ Geographic Locations</div>
+                                    <div>Includes 50K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a></div>
+                                    <div>+ 20K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a> / $10 month</div>
+                                    <div>Includes 1 <a class="has-text-primary has-text-weight-semibold" href="#project">Project</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="{{🎨.signup-url}}" class="card-footer-item is-uppercase has-text-weight-semibold is-size-7">
+                                Get Started
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card is-dark">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered is-uppercase has-text-weight-semibold has-text-white">
+                                Growth
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="has-text-centered">
+                                <div class="is-size-7 has-text-white">Starting at</div>
+                                <div class="is-size-3 has-text-white">$199 / <span class="is-size-6">month</span></div>
+                                <div class="is-size-7 has-text-white">
+                                    <div>&nbsp;</div>
+                                    <div>Only pay for live deployments.</div>
+                                    <div>5+ Geographic Locations</div>
+                                    <div>Includes 500K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a></div>
+                                    <div>+ 20K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a> / $5 month</div>
+                                    <div>Includes 1 <a class="has-text-primary has-text-weight-semibold" href="#project">Project</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="{{🎨.signup-url}}" class="card-footer-item is-uppercase has-text-weight-semibold is-size-7">
+                                Get Started
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-light has-shadow">
+    <div class="hero-body">
+        <div class="container">
+            <div class="title has-text-dark is-size-3 has-text-weight-light has-text-centered">
+                An adaptive pricing model for every great idea.
+            </div>
+
+            {{!<div class="is-block">&nbsp;</div>}}
+
+            <div id="project" class="box is-white">
+                <div class="columns">
+                    <div class="is-1 column has-text-centered is-hidden-mobile">
+                        <div class="icon is-medium">{{>svg-cloud-distribution}}</div>
+                    </div>
+                    <div class="is-8 column">
+                        <h2 class="title is-size-5 is-uppercase has-text-weight-semibold">Project</h2>
+                        <p class="is-size-7 is-block">
+                            A project organizes everything under a single umbrella.
+                            From development source code, test environments, access keys,
+                            deployment on a custom domain, and operation of your web app.
+                        </p>
+                        <ul class="feature-list has-text-grey">
+                            <li>Custom domain hosting</li>
+                            <li>SSL certificate</li>
+                            <li>Every plan includes all features</li>
+                            <li>GitHub or Bitbucket connection</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <div class="title is-size-5 has-text-success has-text-weight-normal" data-price-usd="9" data-price-eur="9">$9</div>
+                        <div class="subtitle is-size-7 has-text-grey has-text-weight-normal">per month</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="stack-units" class="box is-white">
+                <div class="columns">
+                    <div class="is-1 column has-text-centered is-hidden-mobile">
+                        <div class="icon is-medium">{{>svg-coin-stack}}</div>
+                    </div>
+                    <div class="is-8 column">
+                        <h2 class="title is-size-5 is-uppercase has-text-weight-semibold">Stack Units</h2>
+                        <p class="is-size-7 is-block">
+                            One size never fits all, and our feature-based pricing units ensure
+                            that your app's unique usage patterns are always taken into account.
+                        </p>
+                        <div class="is-block">
+                            <ul class="feature-list has-text-grey">
+                                <li>Share units between multiple projects</li>
+                                <li>Includes storage, access, and usage</li>
+                            </ul>
+                        </div>
+
+                        <hr>
+
+                        <div class="columns is-mobile">
+                            <div class="is-4 column">
+                                <h2 class="title is-size-6 has-text-weight-medium">Universal Record</h2>
+                            </div>
+                            <div class="column">
+                                <div class="title is-size-7 has-text-success has-text-weight-normal">1 Unit</div>
+                            </div>
+                        </div>
+                        <div class="is-block is-sub-block is-size-7 has-text-weight-normal has-text-grey">
+                            Never go wrong with our most granular model type.
+                            Generously sized up to 20KB, supports unique values, parent/child relationships.
+                        </div>
+
+                        <div class="columns is-mobile">
+                            <div class="is-4 column">
+                                <h2 class="title is-size-6 has-text-weight-medium">Content Record</h2>
+                            </div>
+                            <div class="column">
+                                <div class="title is-size-7 has-text-success has-text-weight-normal">2 Units</div>
+                            </div>
+                        </div>
+                        <div class="is-block is-sub-block is-size-7 has-text-weight-normal has-text-grey">
+                            For that next great article, blog post, or other large text, markdown, and HTML.
+                            Supports records up to 200KB.
+                        </div>
+
+                        <div class="columns is-mobile">
+                            <div class="is-4 column">
+                                <h2 class="title is-size-6 has-text-weight-medium">Image Record</h2>
+                            </div>
+                            <div class="column">
+                                <div class="title is-size-7 has-text-success has-text-weight-normal">3 Units</div>
+                            </div>
+                        </div>
+                        <div class="is-block is-sub-block is-size-7 has-text-weight-normal has-text-grey">
+                            Everything you need to handle free-form user image uploads,
+                            including automatic resizing, secure upload, public/private access control,
+                            and adult content scanning.
+                        </div>
+
+                        <div class="columns is-mobile">
+                            <div class="is-4 column">
+                                <h2 class="title is-size-6 has-text-weight-medium">User Record</h2>
+                            </div>
+                            <div class="column">
+                                <div class="title is-size-7 has-text-success has-text-weight-normal">100 Units</div>
+                            </div>
+                        </div>
+                        <div class="is-block is-sub-block is-size-7 has-text-weight-normal has-text-grey">
+                            Our authentication-as-a-services uses third party providers,
+                            and simple but powerful roles and permissions.
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="is-block">
+                            <h2 class="title is-size-6 has-text-weight-medium">Starter Plan</h2>
+                            <div class="subtitle has-text-weight-normal has-text-grey is-size-7">
+                                <div>50K units included:</div>
+                                <div><span class="has-text-success" data-price-usd="10" data-price-eur="10">$10</span> per month</div>
+                                <div>Additional 20K units:</div>
+                                <div><span class="has-text-success" data-price-usd="10" data-price-eur="10">$10</span> per month</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="is-block">
+                            <h2 class="title is-size-6 has-text-weight-medium">Growth Plan</h2>
+                            <div class="subtitle has-text-weight-normal has-text-grey is-size-7">
+                                <div>500K units included:</div>
+                                <div><span class="has-text-success" data-price-usd="190" data-price-eur="10">$190</span> per month</div>
+                                <div>Additional 20K units:</div>
+                                <div><span class="has-text-success" data-price-usd="5" data-price-eur="5">$5</span> per month</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{!
+            <div id="premium-support" class="box is-white">
+                <div class="columns">
+                    <div class="is-1 column has-text-centered is-hidden-mobile">
+                        <div class="icon is-medium">svg-life-preserver</div>
+                    </div>
+                    <div class="is-8 column">
+                        <h2 class="title is-size-5 is-uppercase has-text-weight-semibold">Premium Support</h2>
+                    </div>
+                    <div class="column">
+                        <div class="title is-size-5 has-text-success has-text-weight-normal" data-price-usd="999" data-price-eur="999">$999</div>
+                        <div class="subtitle is-size-7 has-text-grey has-text-weight-normal">per month</div>
+                    </div>
+                </div>
+            </div>
+            }}
+        </div>
+    </div>
+</section>
+
+<section class="hero is-grey-lighter has-shadow">
+    <div class="hero-body">
+        {{>nav-ready}}
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}

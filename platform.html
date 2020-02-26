@@ -1,0 +1,186 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% svg /_logos/ as logo }}
+
+{{< nav-wrapper}}
+
+{{$title}}Full-Service Web App Platform{{/title}}
+
+{{$content}}
+
+<section class="hero is-medium is-light has-hero-background has-shadow">
+    <div class="hero-background is-hidden-mobile has-image-rocket"></div>
+    <div class="hero-head">
+        {{>nav-platform}}
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-two-thirds">
+                    <div class="title is-size-2 has-text-weight-normal" data-aos="fade-right">
+                        A full-service web app platform engineered for growth.
+                    </div>
+                    <div class="subtitle is-size-6" data-aos="fade-left">
+                        Stacklane’s architecture was built from the ground up for scale and security,
+                        using modern stateless best practices, and horizontal scaling to ensure resilience and scale.
+                    </div>
+                    <div class="buttons">
+                        <a href="{{🎨.signup-url}}" class="button is-primary">{{🎨.start-now}}</a>
+                        <a href="{{🎨.contact-sales-url}}" class="button is-white">{{🎨.contact-sales}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-white has-pt-2">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-hidden-mobile">
+                    <div class="is-image-puzzle"></div>
+                </div>
+                <div class="column is-two-thirds">
+                    <div class="title is-size-5 has-text-primary is-uppercase">
+                        Create Faster
+                    </div>
+                    <p class="is-size-5 has-text-weight-light has-text-grey-dark is-block">
+                        Stacklane serves businesses from small single team organizations to
+                        enterprise companies who want to create faster.
+                        We’re committed to innovation and building our business, so businesses like yours can build theirs.
+                        We deliver a solution-based, scalable platform you can use to create whatever your imagination leads you to.
+                    </p>
+                    <p>
+                        <a href="/features" class="has-text-weight-semibold">Explore all features →</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-white">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-two-thirds">
+                    <div class="title is-size-5 has-text-primary is-uppercase">
+                        Present and Future Proof
+                    </div>
+                    <p class="is-size-5 has-text-weight-light has-text-grey-dark is-block">
+                        Stacklane provides carefully selected, time-tested practices
+                        which we optimize for performance
+                        and the least amount of friction, setup, or compromise.
+                        Our careful abstractions ensure that your project is never
+                        left behind as newer features and technologies are added.
+                    </p>
+                    <p>
+                        <a href="/forever" class="has-text-weight-semibold">Learn about <span class="has-text-weight-bold">Forever Code</span> →</a>
+                    </p>
+                </div>
+                <div class="column is-hidden-mobile">
+                    <div class="is-image-eye"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-white">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-hidden-mobile">
+                    <div class="is-image-code-window"></div>
+                </div>
+                <div class="column is-two-thirds">
+                    <div class="title is-size-5 has-text-primary is-uppercase">
+                        Developer-Centric
+                    </div>
+                    <p class="is-size-5 has-text-weight-light has-text-grey-dark is-block">
+                        Stacklane believes in the power of developers and code, and the ability of businesses to
+                        iterate and maintain quality software over long periods of time.
+                        Use the languages you already know and love, and reduce technical debt by
+                        keeping your focus on results &mdash; leave the ever-changing landscape of
+                        stack choices to us.
+                    </p>
+                    <p>
+                        <a href="/developers" class="has-text-weight-semibold">Developer overview →</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-white has-pb-2">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="icon is-medium">{{>svg-shield}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Uncompromising reliability
+                    </div>
+                    <p class="is-size-7 is-block">
+                        We believe web apps and companies of all sizes and shapes
+                        deserve the best. Use our stateless architecture,
+                        geographic data redundancy and replication, global distribution,
+                        and security models, to ensure your web app
+                        is ready for whatever traffic your success brings.
+                    </p>
+                </div>
+                <div class="column is-one-third">
+                    <div class="icon is-medium">{{>svg-global-reach}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Global reach instantly
+                    </div>
+                    <p class="is-size-7 is-block">
+                        Your web app's architecture and infrastructure should be global from day one.
+                        Stacklane offers globally distributed endpoints to weather geographic outages,
+                        an always-on content delivery network, and smart routing
+                        so that users and visitors always access the server closest to them.
+                    </p>
+                </div>
+                <div class="column is-one-third">
+                    <div class="icon is-medium">{{>svg-thought}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Industry expertise built-in
+                    </div>
+                    <p class="is-size-7 is-block">
+                        We founded Stacklane after decades of building and running successful web-based companies.
+                        Our mission is to distill the ever-changing world of technology choices
+                        into a unifying architecture and infrastructure
+                        which helps developers and business owners focus on results
+                        over techniques and buzzwords.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-dark has-shadow">
+    <div class="hero-body">
+        <div class="container">
+            {{>nav-features}}
+            <div class="is-block">&nbsp;</div>
+            <a href="/features" class="is-block is-size-5 has-text-weight-medium is-uppercase has-text-right">
+                See all features →
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-grey-lighter has-shadow">
+    <div class="hero-body">
+        {{>nav-ready}}
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}

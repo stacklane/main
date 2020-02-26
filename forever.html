@@ -1,0 +1,76 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% svg /_logos/ as logo }}
+
+{{< nav-wrapper}}
+
+{{$title}}Pricing{{/title}}
+
+{{$content}}
+
+<section class="hero is-medium is-info is-bold has-shadow">
+    <div class="hero-head">
+        <nav class="navbar is-spaced is-transparent">
+            <div class="container">
+                {{>nav-bar}}
+            </div>
+        </nav>
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="title is-size-1 has-text-weight-normal" data-aos="fade-right">
+                        Write once, run forever.
+                    </div>
+                    <div class="subtitle is-size-6" data-aos="fade-left">
+                        Stop the endless cycle of changing APIs, versions, and deprecations
+                        with <span class="has-text-weight-bold">Forever Code</span>.
+                    </div>
+                    <div class="buttons">
+                        <a href="/platform" class="button is-dark">Explore Platform</a>
+                        <a href="/developers" class="button">Developer Overview</a>
+                    </div>
+                </div>
+                <div class="column is-image-infinite is-image-50 is-hidden-mobile">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-light has-shadow">
+    <div class="hero-body">
+        <div class="container">
+            <div class="title has-text-dark is-size-3 has-text-weight-light has-text-centered">
+                Forever Code Guarantee
+            </div>
+
+            <p class="is-block">
+            Software is the beautiful product that never stops changing.  Customer requirements, deadlines, new features, new directions.  You’ve got enough on your plate.
+            </p>
+            <p class="is-block">
+            All software has external dependencies as runtimes, third party libraries, APIs, security patches, and cloud infrastructure services.  Collectively these place additional demands on your software to adapt to the latest third party whims.  Working those into your already busy development schedule, re-developing, re-testing.  It takes a toll, and most often goes unaddressed, building technical debt, leaving everything constantly behind.
+            </p>
+            <p class="is-block">
+            Stacklane’s platform was built to stand the test of time.  We guarantee that the code you write and run on Stacklane will never need to be rewritten because of a Stacklane version change or deprecation, or we’ll change it for you.  We believe in our platform.  Smart abstractions ensure uncompromising security and scale, and it means we continuously keep up with the latest and greatest technologies while your code lives on.
+            </p>
+            <p class="is-block">
+            Let your business drive code changes.  Leave the rest to Stacklane.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-grey-lighter has-shadow">
+    <div class="hero-body">
+        {{>nav-ready}}
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}
