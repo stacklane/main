@@ -17,6 +17,9 @@
     </div>
     <div class="hero-body">
         <div class="container">
+            <div class="title is-size-3 has-text-weight-light has-text-centered aos-animate">
+                One solution engineered for today, and tomorrow.<br>&nbsp;
+            </div>
             {{>feature-list}}
             <div class="buttons is-centered">
                 <a href="{{🎨.signup-url}}" class="button is-primary">{{🎨.start-now}}</a>
@@ -225,6 +228,17 @@
                     {{$long}}
                     Stacklane's horizontal, stateless, endpoint and data scaling ensure
                     that as your business grows, your app remains stable and accessible.
+                    {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                    {{$id}}forever-code{{/id}}
+                    {{$icon}}{{>feature-icon-forever-code}}{{/icon}}
+                    {{$title}}Forever Code{{/title}}
+                    {{$long}}
+                    Stacklane’s platform was built to stand the test of time. We guarantee that the code you write and run on
+                    Stacklane will never need to be re-written because of a Stacklane version change or deprecation, or we’ll change it for you.
+                    <br>
+                    <a href="/forever" class="has-text-primary">Learn more →</a>
                     {{/long}}
                     {{/ feature-item}}
                     {{/items}}
