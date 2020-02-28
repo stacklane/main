@@ -2,6 +2,7 @@
 
 {{% svg /_svg/ as svg }}
 {{% partial /_nav/ as nav }}
+{{% partial /_feature/ as feature }}
 {{% svg /_logos/ as logo }}
 
 {{< nav-wrapper}}
@@ -166,7 +167,7 @@
 <section class="hero is-dark has-shadow">
     <div class="hero-body">
         <div class="container">
-            {{>nav-features}}
+            {{>feature-list}}
             <div class="is-block">&nbsp;</div>
             <a href="/features" class="is-block is-size-5 has-text-weight-medium is-uppercase has-text-right">
                 See all features →
