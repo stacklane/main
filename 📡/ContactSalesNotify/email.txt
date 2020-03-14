@@ -1,0 +1,4 @@
+Name: {{form.firstName}} {{form.lastName}}
+Email: {{form.email}}
+
+{{form.content}}

@@ -1,0 +1,70 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% partial /_feature/ as feature }}
+{{% svg /_logos/ as logo }}
+{{% import {ContactSalesForm, InputControl} from '📤' }}
+
+{{< nav-wrapper}}
+
+{{$title}}Stacklane: Contact our sales team{{/title}}
+
+{{$content}}
+
+<section class="hero is-light has-hero-background has-shadow">
+    <div class="hero-head">
+        <nav class="navbar is-spaced is-transparent">
+            <div class="container">
+                {{>nav-bar}}
+            </div>
+        </nav>
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="title is-size-2 has-text-weight-light has-text-centered has-text-dark">
+                Contact our sales team
+            </div>
+            <div class="subtitle has-text-grey is-size-5 has-text-weight-light has-text-centered">
+                {{!Our team is happy to answer your sales questions.
+                <br>}}
+                Fill out the form and we’ll be in touch as soon as possible.
+                <br>
+                &nbsp;
+            </div>
+
+            <div class="columns">
+                <div class="column">
+                    <div class="box is-white">
+                        {{#ContactSalesForm.view}}
+                        <form action="/contact-sales" method="POST">
+                            {{{ InputControl firstName }}}
+                            {{{ InputControl lastName }}}
+                            {{{ InputControl email }}}
+                            {{{ InputControl website }}}
+                            {{{ InputControl content }}}
+                            <div class="field is-horizontal">
+                                <div class="field-label">{{! empty for spacing }}</div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input type="submit" class="button is-primary" value="Contact Us">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        {{/ContactSalesForm.view}}
+                    </div>
+                </div>
+                <div class="column is-one-third is-hidden-mobile">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}
