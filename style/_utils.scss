@@ -2,10 +2,10 @@
 
 .is-block{
   @include block;
-
-  &.is-sub-block{
-    margin-top: $subtitle-negative-margin;
-  }
+}
+.is-sub-block{
+  @include block;
+  margin-top: $subtitle-negative-margin;
 }
 
 .is-scrolled-visible{
