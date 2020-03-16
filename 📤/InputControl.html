@@ -1,11 +1,11 @@
 <!--TEMPLATE mustache-->
 {{#updatable}}
-<div class="field is-horizontal">
-    <div class="field-label is-normal">
-        <label for="{{path}}">{{label}}</label>
-    </div>
-    <div class="field-body">
-        <div class="field">
+<div class="field">
+    <div class="columns">
+        <div class="column is-4">
+            <label class="label" for="{{path}}">{{label}}</label>
+        </div>
+        <div class="column">
             <div class="control">
                 {{#input as input}}
                 <input id="{{path}}" name="{{path}}" value="{{value}}"

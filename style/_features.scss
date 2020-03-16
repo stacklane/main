@@ -1,35 +1,5 @@
 $feature-table-padding: 8px;
 
-ul.feature-list{
-  display:flex;
-  flex-direction:row;
-  flex-wrap: wrap;
-
-  li{
-    position: relative;
-    padding: 4px 0 4px 32px;
-    width: 100%;
-    font-size: $size-7;
-
-    @include tablet(){
-      width: 50%;
-    }
-
-    &:before{
-      content: "";
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      top: 8px;
-      left: 0;
-      background-image: url(/images/check.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50%;
-    }
-  }
-}
-
 .is-dark .feature-table {
   background: $black;
 

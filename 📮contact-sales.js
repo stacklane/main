@@ -5,7 +5,7 @@ try {
 
     new ContactSalesNotify().form(ContactSalesForm.validate()).submit();
 
-    Redirect.home(); // TODO "be in touch" screen
+    Redirect.home().name('contact-result');
 
 } catch ($ModelInvalid){
 
