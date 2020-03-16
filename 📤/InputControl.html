@@ -13,7 +13,7 @@
                 {{/input}}
                 {{#textarea as textarea}}
                 <textarea id="{{path}}" name="{{path}}"
-                          class="textarea" {{{textarea.attributes}}}>{{value}}</textarea>
+                          class="textarea {{#invalid}}is-danger{{/invalid}}" {{{textarea.attributes}}}>{{value}}</textarea>
                 {{/textarea}}
             </div>
             {{#about}}<p class="help">{{about}}</p>{{/about}}
