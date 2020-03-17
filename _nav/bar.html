@@ -1,0 +1,88 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_logos/ as logo }}
+{{% svg /_svg/ as svg }}
+
+<div class="navbar-brand">
+    <a href="/" class="navbar-item">
+        {{> logo-stacklane_logo }}
+    </a>
+</div>
+<div class="navbar-start has-text-weight-medium">
+    <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-arrowless" href="/platform">
+            Platform
+        </a>
+        <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item" href="/platform">
+                <span class="icon is-medium is-spaced">{{>svg-cloud-ladder}}</span>
+                <span>
+                    <span>&nbsp;Overview</span>
+                    <br>
+                    <span class="is-size-7 has-text-grey">&nbsp;Start here with a platform overview.</span>
+                </span>
+            </a>
+            <a class="navbar-item" href="/features">
+                <span class="icon is-medium is-spaced">{{>svg-puzzle}}</span>
+                <span>
+                    <span>&nbsp;Features</span>
+                    <br>
+                    <span class="is-size-7 has-text-grey">&nbsp;Take a deeper look at platform features.</span>
+                </span>
+            </a>
+            <a class="navbar-item" href="/guide/">
+                <span class="icon is-medium is-spaced">{{>svg-compass}}</span>
+                <span>
+                    <span>&nbsp;Evaluation Guide →</span>
+                    <br>
+                    <span class="is-size-7 has-text-grey">&nbsp;Read our question and answer guide.</span>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-arrowless" href="/developers">
+            Developers
+        </a>
+
+        <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item" href="/developers">
+                <span class="icon is-medium is-spaced">{{>svg-browser-coding}}</span>
+                <span>
+                    <span>&nbsp;Overview</span>
+                    <br>
+                    <span class="is-size-7 has-text-grey">&nbsp;Start here with a developer overview.</span>
+                </span>
+            </a>
+            <a class="navbar-item" href="/docs/">
+                <span class="icon is-medium is-spaced">{{>svg-book}}</span>
+                <span>
+                    <span>&nbsp;Documentation →</span>
+                    <br>
+                    <span class="is-size-7 has-text-grey">&nbsp;Get started with our developer docs.</span>
+                </span>
+            </a>
+            <a class="navbar-item" href="/status/">
+                <span class="icon is-medium is-spaced">{{>svg-radar}}</span>
+                <span>
+                    <span>&nbsp;System Status →</span>
+                    <br>
+                    <span class="is-size-7 has-text-grey">&nbsp;Check on platform system status.</span>
+                </span>
+            </a>
+        </div>
+    </div>
+    <!--
+    <a class="navbar-item is-hidden-mobile">
+        Company
+    </a>
+    -->
+    <a class="navbar-item" href="/pricing">
+        Pricing
+    </a>
+</div>
+<div class="navbar-end has-text-weight-medium is-hidden-mobile">
+    <a class="navbar-item" href="https://console.stacklane.com/">
+        Sign in →
+    </a>
+</div>

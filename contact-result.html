@@ -1,0 +1,66 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% svg /_logos/ as logo }}
+
+{{< nav-wrapper}}
+
+{{$title}}Nice to meet you{{/title}}
+
+{{$content}}
+
+<section class="hero is-medium is-info is-bold has-shadow">
+    <div class="hero-head">
+        <nav class="navbar is-spaced is-transparent">
+            <div class="container">
+                {{>nav-bar}}
+            </div>
+        </nav>
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="title is-size-1 has-text-weight-normal" data-aos="fade-right">
+                        Nice to meet you.
+                    </div>
+                    <div class="subtitle is-size-5" data-aos="fade-left">
+                        Our team is happy to answer your sales questions.
+                        We’ll get back to you as soon as possible.
+                    </div>
+                </div>
+                <div class="column is-image-meet is-hidden-mobile">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-grey-lighter has-shadow">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="title is-size-4 has-text-weight-light has-text-primary">
+                        Have a few extra minutes?
+                    </div>
+                    <div class="subtitle is-size-4 has-text-weight-normal has-text-dark">
+                        Take a look at our platform information.
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="buttons is-pulled-right">
+                        <a href="/platform" class="button is-dark">Explore Platform</a>
+                        <a href="/guide/" class="button">Read Evaluation Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}

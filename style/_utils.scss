@@ -1,0 +1,42 @@
+@import "/style/variables";
+
+.is-block{
+  @include block;
+}
+.is-sub-block{
+  @include block;
+  margin-top: $subtitle-negative-margin;
+}
+
+.is-scrolled-visible{
+  visibility:hidden;
+}
+
+.is-scrolled .is-scrolled-visible{
+  visibility:visible;
+}
+
+@mixin nav-item-color($color, $hover, $active){
+  .navbar-start > a.navbar-item,
+  .navbar-end > a.navbar-item{
+    color: $color !important;
+
+    &:hover{
+      color: $hover !important;
+    }
+    &.is-active{
+      color: $active !important;
+    }
+  }
+
+  .navbar-item.has-dropdown.is-hoverable{
+    .navbar-link{
+      color: $color !important;
+    }
+    &:hover{
+      .navbar-link{
+        color: $hover !important;
+      }
+    }
+  }
+}

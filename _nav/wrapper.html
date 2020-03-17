@@ -1,0 +1,57 @@
+<!--TEMPLATE mustache-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{$title}}{{/title}} | Stacklane</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/style/style.scss">
+
+    <script>$ready = (fn)=>{ let r = document.readyState; (r === 'interactive' || r === 'complete') ? fn() : document.addEventListener('DOMContentLoaded', fn, false); };</script>
+
+    <link rel="icon" type="image/png" href="/fav/16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/fav/32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/fav/192.png" sizes="192x192" />
+
+    <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101242183);</script>
+    <clicky.com-script async/>
+
+    {{! Imports }}
+    {{% svg /_logos/ as logo }}
+    {{% partial /_nav/ as nav }}
+</head>
+<body>
+
+{{$content}}{{/content}}
+
+<section class="hero is-info is-bold is-size-7 has-shadow">
+    <div class="hero-body">
+        <div class="container">
+            {{>nav-footer}}
+
+            <div>
+                &copy; Stacklane, Inc. {{🎨.start-year}}-{{%year}}
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
+<script>
+    $ready(()=>{
+        AOS.init({
+            offset: 120,
+            duration: 400,
+            easing: 'ease-in-sine',
+            delay: 0,
+            once: true,
+            disable: 'mobile'
+        });
+    })
+</script>
+
+</body>
+</html>

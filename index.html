@@ -1,413 +1,139 @@
 <!--TEMPLATE mustache-->
-<!DOCTYPE html>
-<!--[if lt IE 9 ]><html class="oldie" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
-<!--<![endif]-->
-<head>
-    <title>Stacklane</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link itemprop="content-security-policy" data-connect-self="true">
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% svg /_logos/ as logo }}
 
-    <link rel="stylesheet" href="css/theme.scss">
+{{< nav-wrapper}}
 
-    <link rel="icon" type="image/png" href="/fav/16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="/fav/32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/fav/192.png" sizes="192x192" />
+{{$title}}Full-Service Web App Platform{{/title}}
 
-    <link rel="prefetch" href="/docs/" />
+{{$content}}
 
-    {{% svg /images/text-only-mono as inline-logo }}
-</head>
-
-<body id="top">
-
-    <!-- header 
-   ================================================== -->
-   <header id="header" class="row">
-
-   		<div class="header-logo">
-	        <a href="/">
-				<span aria-hidden="true">Stacklane</span>
-                {{>inline-logo}}
-			</a>
-	    </div>
-
-	   	<nav id="header-nav-wrap"> <!-- nav-wrap nav-collapse nav-menu -->
-			<ul class="header-main-nav" data-gumshoe> <!-- nav -->
-				<li><a class="smoothscroll" href="#home" title="home">Home</a></li>
-                <li><a class="smoothscroll" href="#about" title="platform">Platform</a></li>
-                <!--<li><a class="smoothscroll" href="#pricing" title="pricing">Pricing</a></li>-->
-				<li><a href="/docs/" title="docs">Docs</a></li>
-                <li>
-                    <a href="/status/" id="status" class="up">
-                        <span id="status-indicator"></span>
-                        <span id="status-text"></span>
-                    </a>
-                </li>
-			</ul>
-
-           <!-- <a href="#" title="sign-up" class="button button-primary cta">Sign In</a> -->
-		</nav>
-
-		<a class="header-menu-toggle" data-nav-toggle="#header-nav-wrap" href="#"><span>Menu</span></a>
-   	
-   </header> <!-- /header -->
-
-
-   <!-- home
-   ================================================== -->
-   <section id="home">
-
-        <div class="overlay"></div>
-        <div class="home-content">        
-
-            <div class="row contents">                     
-                <div class="home-content-left">
-
-					<div class="fade-up-onload">
-                    <h3>Welcome to Stacklane</h3>
-
-                    <h1>
-                        The automatically
-                        <br>scalable platform for
-                        <br>serverless web apps,
-                        <br>smart data models,
-                        <br>and rapid results.
-                    </h1>
-
+<section class="hero is-large is-info is-bold has-hero-background has-shadow">
+    <div class="hero-background is-hidden-mobile has-image-supported"></div>
+    <div class="hero-head">
+        <nav class="navbar is-spaced is-transparent">
+            <div class="container">
+                {{>nav-bar}}
+            </div>
+        </nav>
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-two-thirds">
+                    <div class="title is-size-1 has-text-weight-normal" data-aos="fade-right">
+                        Build better web apps, faster.
+                    </div>
+                    <div class="subtitle is-size-6" data-aos="fade-left">
+                        Stacklane is the full-service web application platform that helps you build, run, and scale.
+                        Start thinking about results, and leave the rest to Stacklane’s
+                        scalable software architecture and cloud infrastructure.
+                    </div>
                     <div class="buttons">
-						<!--
-                        <a href="#download" class="smoothscroll button stroke">
-                            <span class="icon-circle-down" aria-hidden="true"></span>
-                            Create Account
-                        </a>-->
-							
-					
-                        <a href="/docs/" class="button stroke">
-                            View Docs
-                        </a>
-
-                    </div>        
-					</div>                                
-
-                </div>
-
-                <div class="home-image-right">
-				
-                    <img src="images/parts-470.png" 
-                        srcset="images/parts-470.png 1x, images/parts-940.png 2x"  
-                        class="fade-up-onload slower">
-						
+                        <a href="{{🎨.signup-url}}" class="button is-dark">{{🎨.start-now}}</a>
+                        <a href="{{🎨.contact-sales-url}}" class="button">{{🎨.contact-sales}}</a>
+                    </div>
                 </div>
             </div>
-
-        </div> <!-- end home-content -->
-
-
-        <div class="home-scrolldown">
-            <a href="#about" class="scroll-icon smoothscroll">
-                <span>Scroll Down</span>
-				→
-            </a>
         </div>
-
-    </section> <!-- end home -->  
-
-
-    <!-- features
-    ================================================== -->
-    <section id="about">
-
-        <div class="row about-intro">
-
-            <div class="col-four">
-                <h1 class="intro-header" data-aos="fade-up">A Better Box</h1>
-            </div>
-            <div class="col-eight">
-                <p class="lead" data-aos="fade-up">
-                    Stacklane's platform provides turnkey 
-					software architecture and cloud infrastructure 
-					for new websites and web apps.
-					Decades of battle-worn best 
-					practices are distilled into readily usable patterns &mdash;
-					whenever possible we do not reinvent the wheel, 
-					but make the wheel faster to drive.
-					And best-in-class infrastructure providers ensure immediate
-					scale and durability.
-                </p>
-            </div>                       
-            
-        </div>
-
-        <div class="row about-features">
-
-            <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
-
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><img src="features/layers-md.svg"/></span>
-
-                    <div class="service-content">
-
-                        <h3>Microservice Architecture</h3>
-
-                        <p>
-                            Think and code with small, purpose-specific logic
-
-                            &mdash; efficient to maintain and evolve with
-                            changing teams.
-
-                            Business goals can be organized as distinct sites,
-                            and then combined at different URLs to build a complete solution.
-
-                            Or, host your newest initiative at your own sub-domain.
-                        </p>
-                    </div>
-
-                </div> <!-- /bgrid -->
-
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><img src="features/lock-locked-md.svg"/></span>
-
-                    <div class="service-content">
-                        <h3>Security First</h3>
-
-                        <p>
-                            All data stored with Stacklane is encrypted at rest,
-                            and SSL is available
-                            for no extra charge beyond the certificate's cost.
-                            Every page is served with a Content Security Policy to
-                            prevent code injection attacks.
-                            We never track your visitors, and all cookies
-                            are under your control.
-                        </p>
-                    </div>
-
-                </div> <!-- /bgrid -->
-
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><img src="features/server-md.svg"/></span>		            
-
-                    <div class="service-content">
-                        <h3>Highly Scalable NoSQL</h3>
-
-                        <p>
-							Our document based database solution is highly available and durable, 
-							with multi-master nodes spread across geographic regions.
-							Sharding and replication are automatic, 
-							 giving you a database
-							 that <em>scales automatically to handle your application's load</em>. 
-                        </p> 
-                    </div> 	            	               
-
-                </div> <!-- /bgrid -->
-
-                    <div class="bgrid feature" data-aos="fade-up">
-
-                        <span class="icon"><img src="features/code-md.svg"/></span>	              
-
-                    <div class="service-content">
-                        <h3>Clean, REST-Oriented Code</h3>
-
-                        <p>
-							Simple, direct execution of your code files stored in GIT,
-							and organized by RESTful paths.  
-							No UI setup or provisioning of individual endpoints or assets.
-							<em>Carefully selected and highly-tuned</em> technologies &mdash;
-							including server-side validated Javascript, Mustache, 
-							HTML, and SCSS &mdash; work together to express your design.	
-                        </p> 
-                    </div>                
-
-                    </div> <!-- /bgrid -->
-
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><img src="features/database-md.svg"/></span>	            
-
-                    <div class="service-content">	
-                        <h3>Smart Data Models</h3>
-
-                        <p>
-							<em>Every new field is immediately indexed, queryable, and code-ready.</em>
-							Choose from available model types to define an 
-							overall purpose to your model's data (tenant, content, event, etc.)
-							Based on this type, the platform automatically optimizes
-							how the backend stores and manages the model's data.
-                        </p>                            
-                    </div>	               
-
-                </div> <!-- /bgrid -->
-
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><img src="features/network-md.svg"/></span>	   	           
-
-                    <div class="service-content">
-                        <h3>Serverless Global Scale</h3>
-
-                        <p>
-                            Go serverless, and focus on outcomes not individual instances.
-                            Endpoints are deployed within minutes to multiple U.S. and W. European locations.
-                            And with more than 80 edge locations around the world,
-							the always-on content delivery network ensures your CSS and images
-							are close to visitors &mdash; <em>faster page loads and increased engagement</em>.
-                        </p> 
-                    </div>	               
-
-                </div> <!-- /bgrid -->
-
-            </div> <!-- end features-list -->
-
-        </div> <!-- end about-features -->
-
-    </section> <!-- end about -->
-
-
-    <!-- footer
-    ================================================== -->
-    <footer>
-        <div class="footer-main">
-            <div class="row">
-
-                <div class="col-three md-1-3 tab-full footer-info">
-
-                    <div class="footer-logo"></div>
-
-                    <p>
-                        Stacklane is the automatically
-                        scalable platform for
-                        serverless web apps,
-                        smart data models,
-                        and rapid results.
-                    </p>
-                    <!--
-                                        <ul class="footer-social-list">
-                                            <li>
-                                                <a href="#"><i class="fa fa-facebook-square"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-behance"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                            </li>
-                                        </ul>-->
-
-
-                </div> <!-- end footer-info -->
-
-                <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
-
-                    <h4>Contact</h4>
-
-                    <p>
-                        2500 30th St #303<br>
-                        Boulder, Colorado<br>
-                        80301 US<br>
-                    </p>
-
-                    <p>
-                       <!--
-                       Email/Form/Phone
-                       -->
-                    </p>
-
-                </div> <!-- end footer-contact -->
-
-                <div class="col-two md-1-3 tab-1-2 mob-full footer-site-links">
-
-                    <h4>Site Links</h4>
-
-                    <ul class="list-links">
-                        <li><a href="/#top" class="smoothscroll">Home</a></li>
-                        <li><a href="/docs/">Documentation</a></li>
-                        <!--
-                       <li><a href="/#pricing" class="smoothscroll">Pricing</a></li>
-
-                                               <li><a href="/about">About Us</a></li>
-                                               <li><a href="#">Blog</a></li>
-                                               <li><a href="#">FAQ</a></li>
-                                               <li><a href="#">Terms</a></li>
-                                               <li><a href="/privacy">Privacy Policy</a></li>
-                       -->
-                    </ul>
-
-                </div> <!-- end footer-site-links -->
-
-                <div class="col-four md-1-2 tab-full footer-subscribe">
-                    <!--
-
-                                     <h4>Our Newsletter</h4>
-
-                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                     <div class="subscribe-form">
-
-                                         <form id="mc-form" class="group" novalidate="true">
-
-                                             <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-
-                                             <input type="submit" name="subscribe" value="Send">
-
-                                             <label for="mc-email" class="subscribe-message"></label>
-
-                                         </form>
-
-                                     </div>
-
-                                 </div> --> <!-- end footer-subscribe -->
-
+    </div>
+</section>
+
+<section class="hero is-medium is-bold has-shadow">
+    <div class="hero-body">
+        <div class="container"> {{! data-aos="fade-up" }}
+            <div class="columns">
+                <div class="column is-hidden-mobile">
+                    <div class="is-image-controller_m"></div>
                 </div>
-            </div>  <!-- /row -->
-        </div> <!-- end footer-main -->
-
-        <div class="footer-bottom">
-
-        <div class="row">
-
-        <div class="col-twelve">
-            <div class="copyright">
-                <span>&copy; Copyright Stacklane, Inc. {{🎨.start-year}}-{{🎨.year}}</span>
-             </div>
-
-             <div id="go-top">
-                <a class="smoothscroll" title="Back to Top" href="#home">↑</a>
-             </div>
+                <div class="column is-two-thirds">
+                    <div class="title is-size-5 has-text-primary is-uppercase">
+                        The complete toolkit for web-based apps
+                    </div>
+                    <p class="is-size-6 is-block">
+                        Stacklane supports the entire application lifecycle to help make your business more successful, providing a strong foundation that will last.  We’ve made the time intensive architectural and infrastructure decisions, so you can work on executing your ideas and build quickly, without sacrificing security and scale. Get back to what you do best: creating great products.
+                    </p>
+                    <p>
+                        <a href="/platform" class="has-text-weight-semibold">Explore the platform →</a>
+                    </p>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
 
+<section class="hero is-medium is-dark is-bold has-shadow">
+    <div class="hero-body">
+        <div class="container"> {{! data-aos="fade-up" }}
+            <div class="columns">
+                <div class="column is-two-thirds">
+                    <div class="title is-size-5 has-text-primary is-uppercase">
+                        Developers First
+                    </div>
+                    <p class="is-size-6 is-block">
+                        Web technologies are the most successful universal runtime in the world.
+                        Writing code for the Stacklane platform means never worrying about API versioning, deprecation,
+                        complex setup UIs, configurations, or arcane build processes.  Great software lasts for years,
+                        and early technology decisions become deeply embedded in your results.
+                        In the end it is the most maintainable code that wins over time.
+                    </p>
+                    <p>
+                        <a href="/developers" class="has-text-weight-semibold">Developer overview →</a>
+                    </p>
+                </div>
+                <div class="column is-hidden-mobile">
+                    <div class="is-image-computer_m"></div>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
 
-        </div> <!-- end footer-bottom -->
+<section class="hero is-white has-hero-background has-shadow">
+    <div class="hero-background has-midline"></div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-variable is-8">
+                <div class="column is-half">
+                    <div class="icon is-medium">{{>svg-layers}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Turnkey Software Architecture
+                    </div>
+                    <p class="is-size-6 is-block">
+                        Rapidly deliver and maintain complex applications with our obsessively engineered architecture.
+                        Carefully crafted abstractions ensure that your code is never left behind as features and technologies evolve.
+                        When faced with delivering results, rest assured that security, speed, and long-term maintenance are not sacrificed.
+                    </p>
+                    <p>
+                        <a href="/platform" class="has-text-weight-semibold">Learn more →</a>
+                    </p>
+                </div>
+                <div class="column is-half">
+                    <div class="icon is-medium">{{>svg-globe}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        Serverless Global Scale
+                    </div>
+                    <p class="is-size-6 is-block">
+                        Go serverless, and focus on outcomes not individual instances.
+                        Web apps are deployed within minutes to multiple U.S. and European locations,
+                        and data scales automatically to handle your application's load.
+                        Faster page loads and increased engagement are the
+                        result of our always-on, worldwide content delivery system.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    </footer>
+<section class="hero is-grey-lighter has-shadow">
+    <div class="hero-body">
+        {{>nav-ready}}
+    </div>
+</section>
 
-    <!--
-      For AOS -- if JS is off, there is still visible content.
-      -->
-    <script>document.body.className='js';</script>
+{{/content}}
 
-    <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js" integrity="sha256-idm3p7jl0XwymUpIccg6WI96tQmoDR/5DWEsnPnxYU4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gumshoejs@3.5.0/dist/js/gumshoe.min.js" integrity="sha256-TXEVZt553SdloHwKbPB+4WR0pfkFGpHZqfx1L9wtX9Q=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5/dist/js/smooth-scroll.min.js" integrity="sha256-MMt0/21G3z0Zg4ET1kI3HC9npItDowkitRDVr0FhCxA=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/astronav@10.2.0/dist/js/astro.min.js" integrity="sha256-MDnZknqgMkxQru0xgxWvUglef7TNbZWXYtzu+T+8wdE=" crossorigin="anonymous"></script>
-
-    <script src="js/main.js"></script>
-  
-	<div class="marker-temp"></div>
-</body>
-
-</html>
+{{/nav-wrapper}}

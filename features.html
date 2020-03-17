@@ -1,0 +1,253 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% partial /_feature/ as feature }}
+{{% svg /_feature-icon/ as feature-icon }}
+
+{{< nav-wrapper}}
+
+{{$title}}Full-Service Web App Platform{{/title}}
+
+{{$content}}
+
+<section class="hero is-light has-shadow">
+    <div class="hero-head">
+        {{>nav-platform}}
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="title is-size-3 has-text-weight-light has-text-centered aos-animate">
+                One solution engineered for today, and tomorrow.<br>&nbsp;
+            </div>
+            {{>feature-list}}
+            <div class="buttons is-centered">
+                <a href="{{🎨.signup-url}}" class="button is-primary">{{🎨.start-now}}</a>
+                <a href="{{🎨.contact-sales-url}}" class="button is-white">{{🎨.contact-sales}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-white has-shadow">
+    <div class="hero-body">
+        <div class="container">
+            <section id="develop">
+                <div class="title is-size-2 has-text-weight-normal has-text-centered">
+                    <div class="icon is-large">{{>svg-browser-coding}}</div>
+                    <div>Development</div>
+                </div>
+
+                <div class="is-block">&nbsp;</div>
+
+                {{< feature-section}}
+                    {{$id}}framework{{/id}}
+                    {{$title}}Framework{{/title}}
+                    {{$long}}
+                    Use the languages and tools you already know and love.
+                    {{/long}}
+                    {{$items}}
+                    {{< feature-item}}
+                        {{$id}}files{{/id}}
+                        {{$icon}}{{>feature-icon-files}}{{/icon}}
+                        {{$title}}Files &amp; GIT{{/title}}
+                        {{$long}}
+                        All Stacklane functionality is represented by well-known and easy to maintain files.
+                        There are no complex configurations or new interfaces to learn.
+                        Keep you and your team in sync with standard file formats,
+                        and GIT connections to
+                        <a href="https://github.com/" target="_blank">GitHub</a>
+                        and
+                        <a href="https://bitbucket.org/" target="_blank">Bitbucket</a>.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}javascript{{/id}}
+                        {{$icon}}{{>feature-icon-js}}{{/icon}}
+                        {{$title}}JavaScript{{/title}}
+                        {{$long}}
+                        Stacklane uses a highly tuned server-side JavaScript engine,
+                        optimized for type-safe validation, security, and scale.
+                        It's a subset of the JavaScript you already know,
+                        with perfect abstractions for common web app functionality.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}mustache{{/id}}
+                        {{$icon}}{{>feature-icon-mustache}}{{/icon}}
+                        {{$title}}Mustache{{/title}}
+                        {{$long}}
+                        Use the logic-less Mustache templating language to define HTML views.
+                        Its simple syntax keeps things moving, and any collaborators feeling right at home.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}sass{{/id}}
+                        {{$icon}}{{>feature-icon-sass}}{{/icon}}
+                        {{$title}}Sass{{/title}}
+                        {{$long}}
+                        <a target="_blank" href="https://sass-lang.com/">Sass</a>
+                        is the missing server-side extension for CSS.  Reference files directly in your
+                        HTML views and let Stacklane automatically handle compilation and CDN distribution.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{/items}}
+                {{/ feature-section}}
+
+                {{< feature-section}}
+                    {{$id}}components{{/id}}
+                    {{$title}}Components{{/title}}
+                    {{$long}}
+                    Carefully designed and integrated component abstractions ensure that code
+                    always takes advantage of scale, security, and maintainability.
+                    {{/long}}
+                    {{$items}}
+                    {{< feature-item}}
+                        {{$id}}data{{/id}}
+                        {{$icon}}{{>feature-icon-data-models}}{{/icon}}
+                        {{$title}}Data Models{{/title}}
+                        {{$long}}
+                        With Stacklane data models become as easy to use as a CSS file.
+                        Drop in a file with your model definition, and it immediately becomes available to code.
+                        Production environments use geographic replication, sharding, and caching to ensure
+                        fast and available data.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}users{{/id}}
+                        {{$icon}}{{>feature-icon-users}}{{/icon}}
+                        {{$title}}Users{{/title}}
+                        {{$long}}
+                        Create private member areas with ease, using Stacklane's built-in authentication-as-a-service.
+                        Let users keep the passwords they already have, from trusted third parties they already know.
+                        Define security roles and access rules to ensure users only access the areas they should.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}integrations{{/id}}
+                        {{$icon}}{{>feature-icon-integration}}{{/icon}}
+                        {{$title}}Integrations{{/title}}
+                        {{$long}}
+                        One of the web's greatest accomplishments is its rich cross-linking and resource sharing.
+                        Stacklane makes connections to third party APIs always type-safe, secure,
+                        and reusable between projects.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}keys{{/id}}
+                        {{$icon}}{{>feature-icon-access-keys}}{{/icon}}
+                        {{$title}}Access Keys{{/title}}
+                        {{$long}}
+                        Credentials related to third party integrations use our secure key vault.
+                        This ensures that third party usernames, passwords, credentials,
+                        and tokens are never stored in source code, since they are unusable from within the source code itself.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{/items}}
+                {{/ feature-section}}
+            </section>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-light has-shadow">
+    <div class="hero-body">
+        <div class="container">
+            <section id="deploy">
+                <div class="title is-size-2 has-text-weight-normal has-text-centered">
+                    <div class="icon is-large">{{>svg-cloud-distribution}}</div>
+                    <div>Deployment</div>
+                </div>
+
+                <div class="is-block">&nbsp;</div>
+
+                {{< feature-section}}
+                    {{$id}}test{{/id}}
+                    {{$title}}Testing{{/title}}
+                    {{$long}}
+                    Stacklane's testing environments encourage quick iterations,
+                    testing-as-you-go, and a shared view of progress.
+                    {{/long}}
+                    {{$items}}
+                    {{< feature-item}}
+                        {{$id}}production-parity{{/id}}
+                        {{$icon}}{{>feature-icon-production-parity}}{{/icon}}
+                        {{$title}}Production Parity{{/title}}
+                        {{$long}}
+                        Never again wonder whether something might break between test and production environments.
+                        Stacklane's test environments are matched with production environments in both
+                        architecture and infrastructure, ensuring confidence with every deployment.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}share-test-environments{{/id}}
+                        {{$icon}}{{>feature-icon-share-browser}}{{/icon}}
+                        {{$title}}Shareable links{{/title}}
+                        {{$long}}
+                        Get everyone on the same page with shareable test environments.
+                        Every new test environment uses a distinct, secure, and shareable link,
+                        ensuring that nothing exists in isolation on one machine.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{/items}}
+                {{/ feature-section}}
+
+                {{< feature-section}}
+                    {{$id}}production{{/id}}
+                    {{$title}}Production{{/title}}
+                    {{$long}}
+                    Release early and release often with Stacklane's easy production deployments.
+                    Using feature parity with test environments, there are zero surprises or crossed fingers.
+                    {{/long}}
+                    {{$items}}
+                    {{< feature-item}}
+                        {{$id}}deploy{{/id}}
+                        {{$icon}}{{>feature-icon-deploy}}{{/icon}}
+                        {{$title}}One-click deployment{{/title}}
+                        {{$long}}
+                        Deploy new versions directly from a GIT branch or tag, using whatever workflow
+                        makes sense for your project and team size. Whether a simple master branch, or explicit version tags,
+                        Stacklane will deploy within minutes around the globe.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}global{{/id}}
+                        {{$icon}}{{>feature-icon-production-global}}{{/icon}}
+                        {{$title}}Global distribution{{/title}}
+                        {{$long}}
+                        With Stacklane your web app is global from day one.
+                        Don't wait for success or contingency to consider geographic distribution.
+                        An 80+ location content delivery network, and redundant endpoint hosts,
+                        ensure that visitors can always reach your site, wherever they are.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}scale{{/id}}
+                        {{$icon}}{{>feature-icon-production-scale}}{{/icon}}
+                        {{$title}}Automatic scale{{/title}}
+                        {{$long}}
+                        Stacklane's horizontal, stateless, endpoint and data scaling ensure
+                        that as your business grows, your app remains stable and accessible.
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{< feature-item}}
+                        {{$id}}forever-code{{/id}}
+                        {{$icon}}{{>feature-icon-forever-code}}{{/icon}}
+                        {{$title}}Forever Code{{/title}}
+                        {{$long}}
+                        Stacklane’s platform was built to stand the test of time. We guarantee that the code you write and run on
+                        Stacklane will never need to be re-written because of a Stacklane version change or deprecation, or we’ll change it for you.
+                        <br>
+                        <a href="/forever" class="has-text-primary">Learn more →</a>
+                        {{/long}}
+                    {{/ feature-item}}
+                    {{/items}}
+                {{/ feature-section}}
+            </section>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}

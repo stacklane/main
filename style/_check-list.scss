@@ -1,0 +1,41 @@
+ul.check-list{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+
+  &.is-half{
+    li{
+      @include tablet(){
+        width: 50%;
+      }
+    }
+  }
+
+  li{
+    position: relative;
+    padding: 4px 0 4px 32px;
+    width: 100%;
+    font-size: $size-7;
+
+    &:before{
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 8px;
+      left: 0;
+      background-image: url(/images/check.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50%;
+    }
+  }
+
+  &.is-primary{
+    li{
+      &:before{
+        background-image: url(/images/check-blue.svg);
+      }
+    }
+  }
+}

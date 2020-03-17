@@ -1,0 +1,6 @@
+🎛:
+  default: sales@stacklane.com
+  subject: "Sales Contact: {{form.firstName}} {{form.lastName}}"
+
+form: ⏳.ContactSalesForm
+

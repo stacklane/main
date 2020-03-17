@@ -1,0 +1,77 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% partial /_feature/ as feature }}
+{{% svg /_logos/ as logo }}
+{{% import {ContactSalesForm, InputControl} from '📤' }}
+
+{{< nav-wrapper}}
+
+{{$title}}Contact our sales team{{/title}}
+
+{{$content}}
+
+<section class="hero is-light has-hero-background has-shadow">
+    <div class="hero-head">
+        <nav class="navbar is-spaced is-transparent">
+            <div class="container">
+                {{>nav-bar}}
+            </div>
+        </nav>
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="title is-size-2 has-text-weight-light has-text-centered has-text-dark">
+                Contact our sales team
+            </div>
+            <div class="subtitle has-text-grey is-size-5 has-text-weight-light has-text-centered">
+                {{!Our team is happy to answer your sales questions.
+                <br>}}
+                Fill out the form and we’ll be in touch as soon as possible.
+                <br>
+                &nbsp;
+            </div>
+
+            <div class="columns is-vcentered is-variable is-8">
+                <div class="column">
+                    <div class="box is-white">
+                        {{#ContactSalesForm.view}}
+                        <form action="/contact-sales" method="POST">
+                            {{{ InputControl firstName }}}
+                            {{{ InputControl lastName }}}
+                            {{{ InputControl email }}}
+                            {{{ InputControl website }}}
+                            {{{ InputControl content }}}
+
+                            <div class="is-block">
+                                <div class="columns">
+                                    <div class="column">
+                                        <div class="buttons is-right">
+                                            <input type="submit" class="button is-primary" value="Contact Us">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        {{/ContactSalesForm.view}}
+                    </div>
+                </div>
+                <div class="column is-one-third is-hidden-mobile">
+                    <div class="title has-text-grey is-size-5 has-text-weight-light">
+                        With Stacklane you can:
+                    </div>
+                    <ul class="check-list has-text-grey-dark is-primary">
+                        <li>Focus critical developer resources on your business goals</li>
+                        <li>Launch new web apps faster with less code</li>
+                        <li>Outsource architecture and infrastructure to the cloud</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}
