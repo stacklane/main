@@ -158,10 +158,12 @@ main + footer{
       padding: .5rem;
 
       a.navbar-item{
+        color: $black;
         padding-left: .5rem; // assumes icon
         padding-right: 1rem;
       }
       a.navbar-item:hover{
+        color: $black;
         background: $grey-lightest !important;
       }
       .level-item svg{

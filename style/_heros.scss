@@ -133,4 +133,8 @@
   }
 
   @include nav-item-color($grey-lighter, $grey-lightest, $grey-darker);
+
+  a:not(.button){
+    color:inherit;
+  }
 }
