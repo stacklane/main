@@ -2,11 +2,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{$title}}{{/title}} | Stacklane</title>
+    {{% svg /_logos/ as logo }}
+    {{% partial /_nav/ as nav }}
+    {{% import {Request} from '🔗' }}
+
+    {{% yaml /_open-graph as og }}
+    {{% default title = og.index.title }}
+    {{% default description = og.index.description }}
+
+    <title>{{title}}</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:type" content="website">
+    <meta name="title" property="og:title" content="{{title}}">
+    {{#description}}<meta name="description" property="og:description" content="{{description}}">{{/description}}
+    <meta property="og:url" content="{{Request.url}}">
+    <meta name="image" property="og:image" content="/images/social/📌logo.png">
 
     <link rel="stylesheet" href="/style/style.scss">
 
@@ -18,10 +32,6 @@
 
     <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101242183);</script>
     <clicky.com-script async/>
-
-    {{! Imports }}
-    {{% svg /_logos/ as logo }}
-    {{% partial /_nav/ as nav }}
 </head>
 <body>
 

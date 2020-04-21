@@ -4,9 +4,11 @@
 {{% partial /_nav/ as nav }}
 {{% svg /_logos/ as logo }}
 
-{{< nav-wrapper}}
+{{% yaml /_open-graph as og }}
+{{% const title = og.contact-result.title }}
+{{% const description = og.contact-result.description }}
 
-{{$title}}Nice to meet you{{/title}}
+{{< nav-wrapper}}
 
 {{$content}}
 

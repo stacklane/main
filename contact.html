@@ -6,9 +6,11 @@
 {{% svg /_logos/ as logo }}
 {{% import {ContactSalesForm, InputControl} from '📤' }}
 
-{{< nav-wrapper}}
+{{% yaml /_open-graph as og }}
+{{% const title = og.contact.title }}
+{{% const description = og.contact.description }}
 
-{{$title}}Contact our sales team{{/title}}
+{{< nav-wrapper}}
 
 {{$content}}
 

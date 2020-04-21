@@ -4,9 +4,11 @@
 {{% partial /_nav/ as nav }}
 {{% svg /_logos/ as logo }}
 
-{{< nav-wrapper}}
+{{% yaml /_open-graph as og }}
+{{% const title = og.pricing.title }}
+{{% const description = og.pricing.description }}
 
-{{$title}}Pricing{{/title}}
+{{< nav-wrapper}}
 
 {{$content}}
 

@@ -5,9 +5,11 @@
 {{% partial /_feature/ as feature }}
 {{% svg /_logos/ as logo }}
 
-{{< nav-wrapper}}
+{{% yaml /_open-graph as og }}
+{{% const title = og.platform.title }}
+{{% const description = og.platform.description }}
 
-{{$title}}Full-Service Web App Platform{{/title}}
+{{< nav-wrapper}}
 
 {{$content}}
 
