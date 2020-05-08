@@ -129,8 +129,14 @@ main + footer{
 
   &.is-spaced{
     .navbar-item,.navbar-link{
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      padding-left: .75rem;
+      padding-right: .75rem;
+    }
+    @include tablet{
+      .navbar-item,.navbar-link{
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
     }
     .navbar-item.has-dropdown {
       padding: 0rem; // reset to Bulma
