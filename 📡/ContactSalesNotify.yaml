@@ -1,6 +1,32 @@
 🎛:
   default: sales@stacklane.com
-  subject: "Sales Contact: {{form.firstName}} {{form.lastName}}"
+  subject: "Sales Contact: {{firstName}} {{lastName}}"
 
-form: ⏳.ContactSalesForm
+firstName:
+  type: string
+  placeholder: Jane
+  label: First name
+
+lastName:
+  type: string
+  placeholder: Doe
+  label: Last name
+
+email:
+  type: string
+  placeholder: jane.doe@example.com
+  label: Work email
+
+website:
+  type: string
+  placeholder: example.com
+  label: Company website
+  optional: true
+
+content:
+  type: markdown
+  max: 2000
+  min: 5
+  label: How can we help?
+  placeholder: Tell us about your project, needs, and timeline.
 

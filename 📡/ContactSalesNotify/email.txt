@@ -1,5 +1,5 @@
-Name: {{form.firstName}} {{form.lastName}}
-Email: {{form.email}}
-Website: {{form.website}}
+Name: {{firstName}} {{lastName}}
+Email: {{email}}
+Website: {{website}}
 
-{{form.content}}
+{{content}}
