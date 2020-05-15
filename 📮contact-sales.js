@@ -2,7 +2,9 @@ import {ContactSalesNotify} from '📡';
 
 try {
 
-    //new ContactSalesNotify().form(ContactSalesForm.validate()).submit();
+    const notification = new ContactSalesNotify();
+    ContactSalesNotify.Form.submit(notification);
+    notification.submit();
 
     Redirect.home().name('contact-result');
 
