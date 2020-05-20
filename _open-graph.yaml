@@ -10,6 +10,10 @@ developers:
   title: Developer-Centric Web App Platform
   description: Deploy web apps quickly on a stable foundation with* *turnkey software architecture. Reduce technical debt and create better products with the tools you already use such as JavaScript, NoSQL, GitHub, and BitBucket.
 
+ide:
+  title: Developer-Centric Web App Platform
+  description: Deploy web apps quickly on a stable foundation with* *turnkey software architecture. Reduce technical debt and create better products with the tools you already use such as JavaScript, NoSQL, GitHub, and BitBucket.
+
 pricing:
   title: Pricing For All Stages
   description: An adaptive pricing model for every great idea, starting at $19/€19 per month. Always free development and test environments.

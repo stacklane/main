@@ -184,7 +184,4 @@ main + footer{
     }
   }
 
-  &.has-text-primary{
-    @include nav-item-color($blue, $blue-lighter, $grey-darker);
-  }
 }

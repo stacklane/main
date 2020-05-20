@@ -88,10 +88,14 @@
     }
   }
 
-  @include nav-item-color($grey-lighter, $grey-lightest, $grey-darker);
+  @include nav-item-color($grey-lighter, $grey-lightest, $primary);
 
   .navbar .container.has-border{
     border-bottom: 2px solid $grey-darker;
+  }
+
+  .navbar.is-secondary-nav{
+    @include nav-item-color($primary, $grey-lighter, $grey-lightest);
   }
 }
 
@@ -116,10 +120,13 @@
     }
   }
 
-  @include nav-item-color($grey, $grey-dark, $grey-darker);
+  @include nav-item-color($grey, $grey-dark, $primary);
 
   .navbar .container.has-border{
     border-bottom: 2px solid $grey-lighter;
+  }
+  .navbar.is-secondary-nav{
+    @include nav-item-color($primary, $grey, $grey-dark);
   }
 }
 

@@ -1,0 +1,95 @@
+<!--TEMPLATE mustache-->
+
+{{% svg /_svg/ as svg }}
+{{% partial /_nav/ as nav }}
+{{% svg /_logos/ as logo }}
+
+{{% yaml /_open-graph as og }}
+{{% const title = og.ide.title }}
+{{% const description = og.ide.description }}
+
+{{< nav-wrapper}}
+
+{{$content}}
+
+<section class="hero is-medium is-dark is-bold has-shadow">
+    <div class="hero-head">
+        {{>nav-developers}}
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-three-fifths">
+                    <img src="/images/ide/ws_small.png"
+                         srcset="/images/ide/ws_medium.png 800w, /images/ide/ws_large.png 1500"
+                         alt="WebStorm IDE Screenshot">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-white is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="icon is-large">{{>logo-intellij}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        IDEA Community (Free)
+                    </div>
+                    <p class="is-size-7 is-block is-sub-block">
+                        Free and open source.
+                        <br>
+                        Download IDEA Community edition, and then add the
+                        <a target="_blank" href="https://plugins.jetbrains.com/plugin/10313-stacklane">Stacklane plugin</a>.
+                        <br>
+                        <a target="_blank" href="https://www.jetbrains.com/idea/">Learn more →</a>
+                        <br>&nbsp;
+                    </p>
+                </div>
+                <div class="column is-half">
+                    <div class="icon is-large">{{>logo-webstorm}}</div>
+                    <div class="title is-size-6 has-text-dark">
+                        WebStorm
+                    </div>
+                    <p class="is-size-7 is-block is-sub-block">
+                        Free 30 day trial.
+                        <br>
+                        Download WebStorm, and then add the
+                        <a target="_blank" href="https://plugins.jetbrains.com/plugin/10313-stacklane">Stacklane plugin</a>.
+                        <br>
+                        <a target="_blank" href="https://www.jetbrains.com/webstorm/">Learn more →</a>
+                        <br>&nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-dark has-shadow is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="title is-size-4 has-text-weight-light has-text-primary">
+                        Ready to get started?
+                    </div>
+                    <div class="subtitle is-size-4 has-text-weight-normal has-text-white">
+                        Check out our developer docs.
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="buttons is-pulled-right">
+                        <a href="/docs/" class="button is-white">Read Docs →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+
+{{/nav-wrapper}}

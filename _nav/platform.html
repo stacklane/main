@@ -2,14 +2,13 @@
 
 {{% svg /_svg/ as svg }}
 {{% partial /_nav/ as nav }}
-{{% import {PlatformNav} from '📤'}}
 
 <nav class="navbar is-spaced is-transparent">
     <div class="container has-border">
         {{>nav-bar}}
     </div>
 </nav>
-<nav class="navbar is-spaced is-transparent is-uppercase has-text-primary has-text-weight-semibold is-size-7">
+<nav class="navbar is-secondary-nav is-spaced is-transparent is-uppercase has-text-primary has-text-weight-semibold is-size-7">
     <div class="container">
         <div class="navbar-brand is-hidden-mobile">
             <a href="/platform" class="navbar-item">
@@ -17,10 +16,10 @@
             </a>
         </div>
         <div class="navbar-end">
-            <a class="navbar-item {{#PlatformNav.overview}}is-active{{/PlatformNav.overview}}" href="/platform">
+            <a class="navbar-item is-activated-nav" href="/platform">
                 Overview
             </a>
-            <a class="navbar-item {{#PlatformNav.features}}is-active{{/PlatformNav.features}}" href="/features">
+            <a class="navbar-item is-activated-nav" href="/features">
                 Features
             </a>
             <a class="navbar-item" href="/guide/">
