@@ -13,13 +13,11 @@ $feature-table-padding: 12px;
     background: $grey-darker;
   }
 
-  :not(.feature-group-header){
-    a{
-      color: $grey-light !important;
+  a{
+    color: $grey-light !important;
 
-      &:hover{
-        color: $grey-lightest !important;;
-      }
+    &:hover{
+      color: $grey-lightest !important;;
     }
   }
 }
@@ -37,21 +35,22 @@ $feature-table-padding: 12px;
     background: $white;
   }
 
+  a{
+    color: $link !important;
+
+    &:hover{
+      color: $link-hover !important;;
+    }
+  }
+
   li.feature-group-header{
     color: $grey-darker !important;
 
     &:not(:first-child){
       border-top-color: $grey-lightest;
     }
-  }
-
-  :not(.feature-group-header){
     a{
-      color: $link !important;
-
-      &:hover{
-        color: $link-hover !important;;
-      }
+      color: $grey-darker !important;
     }
   }
 }
