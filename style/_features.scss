@@ -13,14 +13,12 @@ $feature-table-padding: 12px;
     background: $grey-darker;
   }
 
-  ul {
-    li:not(.feature-group-header){
-      a{
-        color: $grey-light !important;
+  *:not(.feature-group-header){
+    a{
+      color: $grey-light !important;
 
-        &:hover{
-          color: $grey-lightest !important;;
-        }
+      &:hover{
+        color: $grey-lightest !important;;
       }
     }
   }
@@ -39,21 +37,19 @@ $feature-table-padding: 12px;
     background: $white;
   }
 
-  ul{
-    li.feature-group-header{
-      color: $grey-darker !important;
+  li.feature-group-header{
+    color: $grey-darker !important;
 
-      &:not(:first-child){
-        border-top-color: $grey-lightest;
-      }
+    &:not(:first-child){
+      border-top-color: $grey-lightest;
     }
+  }
 
-    li:not(.feature-group-header){
-      a{
-        color: $link !important;
-        &:hover{
-          color: $link-hover !important;;
-        }
+  *:not(.feature-group-header){
+    a{
+      color: $link !important;
+      &:hover{
+        color: $link-hover !important;;
       }
     }
   }
