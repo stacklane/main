@@ -13,7 +13,7 @@ $feature-table-padding: 12px;
     background: $grey-darker;
   }
 
-  *:not(.feature-group-header){
+  :not(.feature-group-header){
     a{
       color: $grey-light !important;
 
@@ -45,9 +45,10 @@ $feature-table-padding: 12px;
     }
   }
 
-  *:not(.feature-group-header){
+  :not(.feature-group-header){
     a{
       color: $link !important;
+
       &:hover{
         color: $link-hover !important;;
       }

@@ -157,12 +157,13 @@ main + footer{
     .navbar-dropdown{
       background: $white;
       color: $black;
-      box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.2);
-      border-radius:5px;
+      //box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 24px rgba(0,0,0,.13);
+      border-radius: 0px; //5px
       //min-width: 420px;
-      transform: translateY(10px);
-      transition-property: transform, opacity;
-      transition-duration: 150ms;
+      transform: none;// translateY(10px);
+      transition-property: none;// transform, opacity;
+      transition-duration: 0ms;// 150ms;
       padding: .5rem;
 
       a.navbar-item{
@@ -181,7 +182,7 @@ main + footer{
     }
     &:hover{
       .navbar-dropdown{
-        transform: translateY(0px);
+        //transform: translateY(0px);
       }
     }
   }
