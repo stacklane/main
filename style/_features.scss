@@ -5,17 +5,19 @@ $feature-table-padding: 8px;
 
   .column:not(:first-child) {
     .feature-header:before {
-      //background: url(/images/arrow-dark.svg);
       background-color: $black;
     }
   }
 
-  ul {
+  .feature-table-body{
     background: $grey-darker;
+  }
 
+  ul {
     li:not(.feature-group-header){
       a{
         color: $grey-light !important;
+
         &:hover{
           color: $grey-lightest !important;;
         }
@@ -29,14 +31,15 @@ $feature-table-padding: 8px;
 
   .column:not(:first-child){
     .feature-header:before{
-      //background: url(/images/arrow-light.svg);
       background-color: $grey-lighter;
     }
   }
 
-  ul{
+  .feature-table-body{
     background: $white;
+  }
 
+  ul{
     li.feature-group-header{
       color: $grey-darker !important;
 
@@ -61,27 +64,30 @@ $feature-table-padding: 8px;
   padding-left: $column-gap;
   padding-right: $column-gap;
 
-  ul{
+  .feature-table-body{
     text-align: center;
     font-size: $size-7;
     border-radius: $radius;
     box-shadow: $box-shadow;
     padding-bottom: $feature-table-padding;
+    padding-top: $feature-table-padding;
+  }
 
+  ul{
     li{
       &.feature-group-header{
-        padding-top: $feature-table-padding;
         font-size: $size-6;
         font-weight: $weight-medium;
 
         &:not(:first-child){
           border-top: 2px solid transparent;
           margin-top: $feature-table-padding;
+          padding-top: $feature-table-padding;
         }
       }
 
       a{
-        display:block;
+        display: block;
         transition: color $speed;
       }
     }
@@ -116,9 +122,8 @@ $feature-table-padding: 8px;
 
   > .columns {
     > .column {
-      a.feature-header {
+      .feature-header {
         border-radius: $radius;
-       // box-shadow: $box-shadow;
         margin-bottom: 10px;
         position: relative;
         text-align: center;
@@ -133,7 +138,8 @@ $feature-table-padding: 8px;
         font-weight: $weight-semibold;
 
         color: $white !important;
-
+      }
+      a.feature-header{
         &:hover{
           color: lighten($primary, 50%) !important;
         }

@@ -12,7 +12,7 @@
 
 {{$content}}
 
-<section class="hero is-info is-bold has-hero-background has-shadow">
+<section class="hero is-light is-bold has-hero-background has-shadow">
     <div class="hero-head">
         <nav class="navbar is-spaced is-transparent">
             <div class="container">
@@ -25,70 +25,75 @@
             <div class="title is-size-2 has-text-weight-light has-text-centered">
                 Pricing built for businesses of all stages.
             </div>
-            <div class="subtitle has-text-dark is-size-3 has-text-weight-light has-text-centered">
+            <div class="subtitle has-text-dark is-size-3 has-text-weight-light has-text-centered is-hidden-mobile">
                 Always free development and test environments.
                 <br>
                 &nbsp;
             </div>
 
-            <div class="columns">
-                <div class="column">
-                    <div class="card is-white">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-uppercase has-text-weight-semibold has-text-primary">
-                                Starter
-                            </p>
-                        </header>
-                        <div class="card-content">
+            <div class="feature-table is-block">
+                <div class="columns is-variable is-1">
+
+                    <div class="column">
+                        <div class="feature-header">
+                            Build
+                        </div>
+                        <div class="feature-table-body">
+                            <div class="has-text-centered">
+                                <div class="is-size-7 has-text-grey">&nbsp;</div>
+                                <div class="is-size-3 has-text-dark">$0 / <span class="is-size-6">month</span></div>
+                            </div>
+                            <div class="is-size-7 has-text-grey">
+                                <div>&nbsp;</div>
+                                <div>Develop on our framework</div>
+                                <div>Shareable test environments</div>
+                                <div>Full featured framework</div>
+                                <div>Production feature parity</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="feature-header">
+                            Launch
+                        </div>
+                        <div class="feature-table-body">
                             <div class="has-text-centered">
                                 <div class="is-size-7 has-text-grey">Starting at</div>
-                                <div class="is-size-3 has-text-dark">$19 / <span class="is-size-6">month</span></div>
-                                <div class="is-size-7 has-text-grey">
-                                    <div>&nbsp;</div>
-                                    <div>Only pay for live deployments.</div>
-                                    <div>2+ Geographic Locations</div>
-                                    <div>Includes 50K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a></div>
-                                    <div>+ 20K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a> / $10 month</div>
-                                    <div>Includes 1 <a class="has-text-primary has-text-weight-semibold" href="#project">Project</a></div>
-                                </div>
+                                <div class="is-size-3 has-text-dark">$29 / <span class="is-size-6">month</span></div>
+                            </div>
+                            <div class="is-size-7 has-text-grey">
+                                <div>&nbsp;</div>
+                                <div>2+ Geographic Locations</div>
+                                <div>Includes 50K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a></div>
+                                <div>+ 20K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a> / $10 month</div>
+                                <div>Includes 1 <a class="has-text-primary has-text-weight-semibold" href="#project">Project</a></div>
                             </div>
                         </div>
-                        <footer class="card-footer">
-                            <a href="{{🎨.signup-url}}" class="card-footer-item is-uppercase has-text-weight-semibold is-size-7">
-                                Get Started
-                            </a>
-                        </footer>
                     </div>
-                </div>
-                <div class="column">
-                    <div class="card is-dark">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-uppercase has-text-weight-semibold has-text-white">
-                                Growth
-                            </p>
-                        </header>
-                        <div class="card-content">
+
+                    <div class="column">
+                        <div class="feature-header">
+                            Scale
+                        </div>
+                        <div class="feature-table-body">
                             <div class="has-text-centered">
-                                <div class="is-size-7 has-text-white">Starting at</div>
-                                <div class="is-size-3 has-text-white">$199 / <span class="is-size-6">month</span></div>
-                                <div class="is-size-7 has-text-white">
-                                    <div>&nbsp;</div>
-                                    <div>Only pay for live deployments.</div>
-                                    <div>5+ Geographic Locations</div>
-                                    <div>Includes 500K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a></div>
-                                    <div>+ 20K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a> / $5 month</div>
-                                    <div>Includes 1 <a class="has-text-primary has-text-weight-semibold" href="#project">Project</a></div>
-                                </div>
+                                <div class="is-size-7 has-text-grey">Starting at</div>
+                                <div class="is-size-3 has-text-dark">$249 / <span class="is-size-6">month</span></div>
+                            </div>
+                            <div class="is-size-7 has-text-grey">
+                                <div>&nbsp;</div>
+                                <div>5+ Geographic Locations</div>
+                                <div>Includes 500K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a></div>
+                                <div>+ 20K <a class="has-text-primary has-text-weight-semibold" href="#stack-units">Stack Units</a> / $5 month</div>
+                                <div>Includes 1 <a class="has-text-primary has-text-weight-semibold" href="#project">Project</a></div>
                             </div>
                         </div>
-                        <footer class="card-footer">
-                            <a href="{{🎨.signup-url}}" class="card-footer-item is-uppercase has-text-weight-semibold is-size-7">
-                                Get Started
-                            </a>
-                        </footer>
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -219,20 +224,20 @@
 
                     <div class="column">
                         <div class="is-block">
-                            <h2 class="title is-size-6 has-text-weight-medium">Starter Plan</h2>
+                            <h2 class="title is-size-6 has-text-weight-medium">Launch</h2>
                             <div class="subtitle has-text-weight-normal has-text-grey is-size-7">
                                 <div>50K units included:</div>
-                                <div><span class="has-text-success" data-price-usd="10" data-price-eur="10">$10</span> per month</div>
+                                <div><span class="has-text-success" data-price-usd="20" data-price-eur="20">$20</span> per month</div>
                                 <div>Additional 20K units:</div>
                                 <div><span class="has-text-success" data-price-usd="10" data-price-eur="10">$10</span> per month</div>
                             </div>
                         </div>
                         <hr>
                         <div class="is-block">
-                            <h2 class="title is-size-6 has-text-weight-medium">Growth Plan</h2>
+                            <h2 class="title is-size-6 has-text-weight-medium">Scale</h2>
                             <div class="subtitle has-text-weight-normal has-text-grey is-size-7">
                                 <div>500K units included:</div>
-                                <div><span class="has-text-success" data-price-usd="190" data-price-eur="10">$190</span> per month</div>
+                                <div><span class="has-text-success" data-price-usd="240" data-price-eur="240">$240</span> per month</div>
                                 <div>Additional 20K units:</div>
                                 <div><span class="has-text-success" data-price-usd="5" data-price-eur="5">$5</span> per month</div>
                             </div>
